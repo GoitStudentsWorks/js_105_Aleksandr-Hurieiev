@@ -65,6 +65,7 @@ async function renderReviews() {
   if (!reviews || reviews.length === 0) {
     showErrorMessage();
   } else {
+    reviewsList.innerHTML = ''; // Clear existing content
     reviews.forEach(review => {
       const reviewCard = createReviewCard(review);
       reviewsList.appendChild(reviewCard);
@@ -111,10 +112,11 @@ function initSwiper() {
         }
 
         if (swiperInstance.isEnd) {
-          // Keep the next button active but show a message if it is clicked again
-          nextButton.disabled = false;
+          nextButton.disabled = true;
+          showErrorMessage();
         } else {
           nextButton.disabled = false;
+          hideErrorMessage();
         }
       },
     },
@@ -123,16 +125,13 @@ function initSwiper() {
   const nextButton = document.querySelector('.custom-swiper-button-next');
   const prevButton = document.querySelector('.custom-swiper-button-prev');
 
+  // Handle button clicks
   function handleNextClick() {
-    if (swiper.isEnd) {
-      showErrorMessage();
-      nextButton.disabled = true;
-      prevButton.disabled = false;
-    }
+    swiper.slideNext();
   }
 
   function handlePrevClick() {
-    hideErrorMessage();
+    swiper.slidePrev();
   }
 
   nextButton.addEventListener('click', handleNextClick);
@@ -150,9 +149,9 @@ function initSwiper() {
   // Handle touch events
   swiper.on('touchEnd', () => {
     if (swiper.isEnd) {
-      handleNextClick();
+      showErrorMessage();
     } else {
-      handlePrevClick();
+      hideErrorMessage();
     }
   });
 }
