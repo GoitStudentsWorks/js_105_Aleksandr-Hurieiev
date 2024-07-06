@@ -1,0 +1,88 @@
+img {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.hero-container {
+    max-width: 1440px;
+
+}
+
+.hero-link {
+    display: flex;
+
+    flex-direction: row;
+    /* justify-content: center;
+        align-items: center; */
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 16px;
+    width: 55px;
+    height: 55px;
+}
+
+.social-list-item {
+
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 16px;
+    width: 55px;
+    height: 55px;
+}
+
+.social-list-link {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    display: blok;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 16px;
+    width: 55px;
+    height: 55px;
+}
+
+.social-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.hero-title {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.mail-btn {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 24px;
+    width: 223px;
+    height: 55px;
+}
