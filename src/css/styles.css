@@ -15,8 +15,7 @@
 @import url('./reviews.css');
 @import url('./work-together.css');
 
-:root {
-  font-family: 'Inter Tight', sans-serif;
+body{
   font-weight: 500;
   color: rgba(250, 250, 250, 0.6);
   background-color: #1c1d20;
@@ -26,8 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+:root {
+  --background: #1c1d20;
+	--cards: #242527;
+	--arrow: #3b3b3b;
+	--button-text: #ed3b44;
+	--main-text: #fafafa;
+  --font-family: "Inter Tight", sans-serif;
+}
 
 .wraper {
+  max-width: 375px;
+  margin: 0 auto;
   padding: 0 16px;
 }
 .section {
