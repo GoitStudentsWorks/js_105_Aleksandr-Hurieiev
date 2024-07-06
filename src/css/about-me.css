@@ -34,6 +34,7 @@ min-height: 500px;
 .accordion-container {
 }
 .ac {
+  background-color: rgba(28,28,28,0)
 }
 .ac-header {
 }
@@ -47,8 +48,8 @@ min-height: 500px;
 .ac {
   margin-top: 8px;
   border: 1px solid #eee;
-  background-color: #fff;
   box-sizing: border-box;
+  padding-bottom: 32px;
 }
 .ac .ac-header {
   margin: 0;
@@ -71,7 +72,6 @@ min-height: 500px;
 }
 .ac .ac-trigger::after {
   content: url(../img/about-me/arrow.svg);
-
   text-align: center;
   width: 15px;
   -webkit-transform: translate(0, -50%);
@@ -79,6 +79,11 @@ min-height: 500px;
   position: absolute;
   right: 10px;
   top: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 100px;
+padding: 9px;
+width: 36px;
+height: 36px;
 }
 .ac .ac-trigger:focus {
   color: #8a8a8a;
@@ -101,7 +106,8 @@ min-height: 500px;
   visibility: visible;
 }
 .ac.is-active > .ac-header .ac-trigger::after {
-  content: '^^';
+  content: url(../img/about-me/arrow.svg);
+  transform: rotate(180deg);
 }
 
 /* ================================================================== */
