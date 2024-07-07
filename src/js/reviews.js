@@ -2,6 +2,8 @@ import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
 let reviews = [];
+let currentReviewIndex = 0;
+let swiper;
 
 async function fetchReviews() {
   try {
@@ -10,7 +12,6 @@ async function fetchReviews() {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
-    console.log('Full API response:', data);
     return data;
   } catch (error) {
     console.error('Error fetching reviews:', error);
@@ -58,25 +59,49 @@ function createReviewCard(review) {
   return li;
 }
 
-async function renderReviews() {
+function getNumberOfSlides() {
+  const width = window.innerWidth;
+  if (width >= 1440) {
+    return 4;
+  } else if (width >= 768) {
+    return 2;
+  } else {
+    return 1;
+  }
+}
+
+async function renderInitialReviews() {
   const reviewsList = document.getElementById('reviews-list');
   reviews = await fetchReviews();
-  console.log('Reviews to render:', reviews);
   if (!reviews || reviews.length === 0) {
     showErrorMessage();
   } else {
-    reviewsList.innerHTML = ''; // Clear existing content
-    reviews.forEach(review => {
-      const reviewCard = createReviewCard(review);
-      reviewsList.appendChild(reviewCard);
-    });
+    const numberOfSlides = getNumberOfSlides();
+    for (let i = 0; i < numberOfSlides; i++) {
+      if (reviews[currentReviewIndex]) {
+        const reviewCard = createReviewCard(reviews[currentReviewIndex]);
+        reviewsList.appendChild(reviewCard);
+        currentReviewIndex++;
+      }
+    }
 
     initSwiper();
   }
 }
 
+function appendNextReview() {
+  const reviewsList = document.getElementById('reviews-list');
+  if (reviews[currentReviewIndex]) {
+    const reviewCard = createReviewCard(reviews[currentReviewIndex]);
+    reviewsList.appendChild(reviewCard);
+    currentReviewIndex++;
+  } else {
+    showErrorMessage();
+  }
+}
+
 function initSwiper() {
-  const swiper = new Swiper('.swiper-container', {
+  swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 12,
     navigation: {
@@ -112,11 +137,15 @@ function initSwiper() {
         }
 
         if (swiperInstance.isEnd) {
+          appendNextReview();
+        } else {
+          hideErrorMessage();
+        }
+
+        if (swiperInstance.isEnd) {
           nextButton.disabled = true;
-          showErrorMessage();
         } else {
           nextButton.disabled = false;
-          hideErrorMessage();
         }
       },
     },
@@ -125,19 +154,19 @@ function initSwiper() {
   const nextButton = document.querySelector('.custom-swiper-button-next');
   const prevButton = document.querySelector('.custom-swiper-button-prev');
 
-  // Handle button clicks
   function handleNextClick() {
-    swiper.slideNext();
+    if (swiper.isEnd) {
+      appendNextReview();
+    }
   }
 
   function handlePrevClick() {
-    swiper.slidePrev();
+    hideErrorMessage();
   }
 
   nextButton.addEventListener('click', handleNextClick);
   prevButton.addEventListener('click', handlePrevClick);
 
-  // Handle keyboard events
   document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'Tab') {
       handleNextClick();
@@ -146,14 +175,21 @@ function initSwiper() {
     }
   });
 
-  // Handle touch events
   swiper.on('touchEnd', () => {
     if (swiper.isEnd) {
-      showErrorMessage();
+      handleNextClick();
     } else {
-      hideErrorMessage();
+      handlePrevClick();
     }
+  });
+
+  // Оновлення конфігурації Swiper при зміні розміру вікна
+  window.addEventListener('resize', () => {
+    swiper.update(); // Оновлення загальної конфігурації
+    swiper.params.slidesPerView = getNumberOfSlides(); // Оновлення кількості слайдів на вид
+    swiper.updateSlides(); // Оновлення слайдів
+    swiper.slideTo(0); // Переміщення на перший слайд після зміни
   });
 }
 
-document.addEventListener('DOMContentLoaded', renderReviews);
+document.addEventListener('DOMContentLoaded', renderInitialReviews);
