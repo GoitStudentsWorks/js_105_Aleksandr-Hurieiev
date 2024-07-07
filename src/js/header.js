@@ -5,7 +5,7 @@ const refs = {
     btnBurger: document.querySelector('.open-menu-btn')
 }
 
-refs.menu.addEventListener('click', (e) => {
+export const menuAnim = refs.menu.addEventListener('click', (e) => {
     e.preventDefault();
     if (refs.menuItems.classList.contains('hidden') == true){
         refs.menuItems.classList.remove('hidden');
