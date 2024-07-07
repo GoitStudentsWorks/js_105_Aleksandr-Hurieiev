@@ -3,15 +3,12 @@
 .btn-swiper .swiper-button-next {
     position: static;
     margin-top: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
+    border-radius: 60%;
     border: 1px solid rgba(250, 250, 250, 0.5);
     background-color: transparent;
-    fill: rgba(250, 250, 250, 1);
 }
 .btn-swiper {
     display: flex;
@@ -22,6 +19,11 @@
 .btn-swiper .swiper-button-next::after{
     display: none
 }
+.icon-btn-l {
+    fill: none;
+    stroke: #fafafa;
+}
+
 /* ==========================swiper btn style */
 
 
@@ -56,6 +58,12 @@
     font-size: 16px;
     letter-spacing: -0.02em;
     font-weight: 500;
+    transition:transform 0.1s ease;
+    cursor: pointer;
+}
+.projects-item:hover {
+
+transform: scale(1.1);
 }
 .project-title {
     font-weight: 500;
@@ -71,8 +79,6 @@
     color: #fafafa;
     border-radius: 60px;
     padding: 13px 32px;
-    width: 141px;
-    height: 45px;
     text-decoration: none;
     letter-spacing: -0.02em;
     text-align: center;
@@ -85,9 +91,7 @@
 
 .project-btn:hover {
     background-color: #e0373f;
-    box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.4),
-        0 4px 10px rgba(248, 0, 4, 0.966);
+    box-shadow: 0 0 8px #4d070a;
 }
 
 .project-btn:focus,
@@ -116,6 +120,12 @@
 .swiper {
     border-radius: 24px;
     margin-bottom: 32px;
+    transition: box-shadow 0.3s ease;
+    }
+    
+.swiper:hover,
+.swiper:active {
+   box-shadow: 0 0 8px #4d070a;
 }
 /* =======box img ============== */
 @media screen and (min-width: 768px) {
@@ -146,10 +156,19 @@
         padding: 120px 45px;
     }
         .project-btn {
-            width: 177px;
-            height: 55px;
+            
             padding: 18px 50px;
         }
+    .btn-swiper .swiper-button-prev,
+    .btn-swiper .swiper-button-next {
+        padding: 18px;
+        width: 68px;
+        height: 68px;
+    }
+        .btn-swiper {
+            gap: 20px;
+        }
+
 }
 @media screen and (min-width: 1440px) {
 .wraper-projects {
@@ -173,7 +192,11 @@
  .cnt-projects-img .project-img {
     max-width: 614px;
  }
+  .project-btn {
+      padding: 15px 50px;
+  }
 }
+
 
 
 
