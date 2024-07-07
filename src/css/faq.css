@@ -1,0 +1,139 @@
+.faq-sec{
+    /* max-width: 375px;
+    margin-left: 16px;
+    margin-right: 16px; */
+}
+
+.faq-title{
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+}
+
+.faq {
+    border-bottom: 1px solid #888888;
+    background-color: #1c1d20;
+    /* box-sizing: border-box;
+    display: inline-block; */
+}
+
+.faq-first-element{
+    border-top: 1px solid #888888;
+}
+
+.faq .faq-header {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.faq .faq-trigger {
+    text-align: left;
+    width: 100%;
+    padding: 8px 32px 8px 8px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color 0.25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0px;
+    padding-right: 80px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+.faq .faq-trigger::after {
+    content:"";
+    position: absolute;
+    right: 10px;
+
+    /* text-align: center;
+    width: 15px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    border: 1px, solid, #eee;
+    border-radius: 50%; */
+}
+
+.faq .faq-trigger:focus {
+    color: #fafafa;
+}
+
+.faq .faq-panel {
+    overflow: hidden;
+    transition-property: height, visibility;
+    transition-timing-function: ease;
+}
+
+.faq .faq-panel .faq-text {
+    padding: 8px;
+    margin: 0;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 32px;
+}
+
+.faq.js-enabled .faq-panel {
+    visibility: hidden;
+}
+
+.faq.is-active .faq-panel {
+    visibility: visible;
+}
+
+.faq.is-active>.faq-header .faq-trigger::after {
+    content: "";
+}
+
+.faq-arrow{
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 50%;
+    margin-right: 0px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+}
+
+.faqArrowSVG{
+margin: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+.faq-sec {
+max-width: 768px;
+}
+
+}
