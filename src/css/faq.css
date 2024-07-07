@@ -1,7 +1,7 @@
 .faq-sec{
-    max-width: 375px;
+    /* max-width: 375px;
     margin-left: 16px;
-    margin-right: 16px;
+    margin-right: 16px; */
 }
 
 .faq-title{
@@ -128,4 +128,12 @@
 
 .faqArrowSVG{
 margin: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+.faq-sec {
+max-width: 768px;
+}
+
 }
