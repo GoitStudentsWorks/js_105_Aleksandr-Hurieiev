@@ -12,6 +12,7 @@ async function fetchReviews() {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
+    console.log('Full API response:', data);
     return data;
   } catch (error) {
     console.error('Error fetching reviews:', error);
@@ -73,6 +74,7 @@ function getNumberOfSlides() {
 async function renderInitialReviews() {
   const reviewsList = document.getElementById('reviews-list');
   reviews = await fetchReviews();
+  console.log('Reviews to render:', reviews);
   if (!reviews || reviews.length === 0) {
     showErrorMessage();
   } else {
@@ -84,7 +86,6 @@ async function renderInitialReviews() {
         currentReviewIndex++;
       }
     }
-
     initSwiper();
   }
 }
@@ -94,6 +95,7 @@ function appendNextReview() {
   if (reviews[currentReviewIndex]) {
     const reviewCard = createReviewCard(reviews[currentReviewIndex]);
     reviewsList.appendChild(reviewCard);
+    swiper.update(); // Оновлюємо Swiper після додавання нового елемента
     currentReviewIndex++;
   } else {
     showErrorMessage();
@@ -102,7 +104,7 @@ function appendNextReview() {
 
 function initSwiper() {
   swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
+    slidesPerView: getNumberOfSlides(),
     spaceBetween: 12,
     navigation: {
       nextEl: '.custom-swiper-button-next',
@@ -122,30 +124,12 @@ function initSwiper() {
     },
     on: {
       init: function () {
-        const prevButton = document.querySelector('.custom-swiper-button-prev');
-        prevButton.disabled = true;
+        updateNavigationButtons();
       },
       slideChange: function () {
-        const swiperInstance = this;
-        const prevButton = document.querySelector('.custom-swiper-button-prev');
-        const nextButton = document.querySelector('.custom-swiper-button-next');
-
-        if (swiperInstance.isBeginning) {
-          prevButton.disabled = true;
-        } else {
-          prevButton.disabled = false;
-        }
-
-        if (swiperInstance.isEnd) {
+        updateNavigationButtons();
+        if (swiper.isEnd && currentReviewIndex < reviews.length) {
           appendNextReview();
-        } else {
-          hideErrorMessage();
-        }
-
-        if (swiperInstance.isEnd) {
-          nextButton.disabled = true;
-        } else {
-          nextButton.disabled = false;
         }
       },
     },
@@ -154,32 +138,29 @@ function initSwiper() {
   const nextButton = document.querySelector('.custom-swiper-button-next');
   const prevButton = document.querySelector('.custom-swiper-button-prev');
 
-  function handleNextClick() {
-    if (swiper.isEnd) {
+  nextButton.addEventListener('click', () => {
+    if (swiper.isEnd && currentReviewIndex < reviews.length) {
       appendNextReview();
     }
-  }
+  });
 
-  function handlePrevClick() {
-    hideErrorMessage();
-  }
-
-  nextButton.addEventListener('click', handleNextClick);
-  prevButton.addEventListener('click', handlePrevClick);
+  prevButton.addEventListener('click', hideErrorMessage);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'Tab') {
-      handleNextClick();
+      if (swiper.isEnd && currentReviewIndex < reviews.length) {
+        appendNextReview();
+      }
     } else if (event.key === 'ArrowLeft') {
-      handlePrevClick();
+      hideErrorMessage();
     }
   });
 
   swiper.on('touchEnd', () => {
-    if (swiper.isEnd) {
-      handleNextClick();
+    if (swiper.isEnd && currentReviewIndex < reviews.length) {
+      appendNextReview();
     } else {
-      handlePrevClick();
+      hideErrorMessage();
     }
   });
 
@@ -190,6 +171,23 @@ function initSwiper() {
     swiper.updateSlides(); // Оновлення слайдів
     swiper.slideTo(0); // Переміщення на перший слайд після зміни
   });
+}
+
+function updateNavigationButtons() {
+  const prevButton = document.querySelector('.custom-swiper-button-prev');
+  const nextButton = document.querySelector('.custom-swiper-button-next');
+
+  if (swiper.isBeginning) {
+    prevButton.disabled = true;
+  } else {
+    prevButton.disabled = false;
+  }
+
+  if (swiper.isEnd && currentReviewIndex >= reviews.length) {
+    nextButton.disabled = true;
+  } else {
+    nextButton.disabled = false;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', renderInitialReviews);
