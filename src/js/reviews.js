@@ -29,8 +29,8 @@ function hideErrorMessage() {
 }
 
 function createReviewCard(review) {
-  const li = document.createElement('li');
-  li.classList.add('reviews-card', 'swiper-slide');
+  const div = document.createElement('div');
+  div.classList.add('reviews-card', 'swiper-slide');
 
   const img = document.createElement('img');
   img.classList.add('reviews-list-avatar');
@@ -52,20 +52,19 @@ function createReviewCard(review) {
 
   box.appendChild(h3);
   box.appendChild(p);
-  li.appendChild(img);
-  li.appendChild(box);
+  div.appendChild(img);
+  div.appendChild(box);
 
-  return li;
+  return div;
 }
 
 async function renderReviews() {
-  const reviewsList = document.getElementById('reviews-list');
+  const reviewsList = document.querySelector('.swiper-wrapper');
   reviews = await fetchReviews();
   console.log('Reviews to render:', reviews);
   if (!reviews || reviews.length === 0) {
     showErrorMessage();
   } else {
-    reviewsList.innerHTML = ''; // Clear existing content
     reviews.forEach(review => {
       const reviewCard = createReviewCard(review);
       reviewsList.appendChild(reviewCard);
@@ -113,10 +112,8 @@ function initSwiper() {
 
         if (swiperInstance.isEnd) {
           nextButton.disabled = true;
-          showErrorMessage();
         } else {
           nextButton.disabled = false;
-          hideErrorMessage();
         }
       },
     },
@@ -125,19 +122,21 @@ function initSwiper() {
   const nextButton = document.querySelector('.custom-swiper-button-next');
   const prevButton = document.querySelector('.custom-swiper-button-prev');
 
-  // Handle button clicks
   function handleNextClick() {
-    swiper.slideNext();
+    if (swiper.isEnd) {
+      showErrorMessage();
+      nextButton.disabled = true;
+      prevButton.disabled = false;
+    }
   }
 
   function handlePrevClick() {
-    swiper.slidePrev();
+    hideErrorMessage();
   }
 
   nextButton.addEventListener('click', handleNextClick);
   prevButton.addEventListener('click', handlePrevClick);
 
-  // Handle keyboard events
   document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'Tab') {
       handleNextClick();
@@ -146,12 +145,11 @@ function initSwiper() {
     }
   });
 
-  // Handle touch events
   swiper.on('touchEnd', () => {
     if (swiper.isEnd) {
-      showErrorMessage();
+      handleNextClick();
     } else {
-      hideErrorMessage();
+      handlePrevClick();
     }
   });
 }
