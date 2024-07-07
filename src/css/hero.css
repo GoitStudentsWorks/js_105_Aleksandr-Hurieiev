@@ -74,10 +74,6 @@ background-color: transparent;
 
 .heroSection {
     position: relative;
- background-image: url('../img/header/Hero.png');
-}
-.hero-container {
-    height: 500px;
 }
 
 
