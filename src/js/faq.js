@@ -639,8 +639,9 @@ export const accordionFaq = new Accordion('.accordionFaq-container');
 
 let textShown = false;
 const faqSVG = document.querySelector(".faqArrowSVG");
-const faqArrow = document.querySelector(".faq-trigger");
-faqArrow.addEventListener("click", faqClick)
+const faqArrow = document.querySelectorAll(".faq-trigger");
+
+faqArrow.forEach((buttonItem) => buttonItem.addEventListener('click', faqClick));
 function faqClick() {
 
 const arrowup = `width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -655,5 +656,3 @@ const arrowdown = `width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
         textShown = false;
     }
 }
-
-
