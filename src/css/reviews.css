@@ -1,5 +1,3 @@
-
-
 .mask-one,
 .mask-two,
 .mask-three {
@@ -34,7 +32,6 @@
     border-radius: 20px;
     padding: 32px 24px;
     background: #1c1d20;
-    /* Замінити */
     margin-left: auto;
     margin-right: auto;
 }
@@ -66,18 +63,6 @@
     .reviews-box {
         width: 296px;
         height: 200px;
-    }
-
-    .mask-one {
-        display: inline;
-    }
-
-    .mask-two {
-        display: none;
-    }
-
-    .mask-three {
-        display: none;
     }
 
     .reviews-list {
@@ -125,7 +110,6 @@
     background: none;
     outline: none;
     position: relative;
-    /* Доданий проміжок між кнопками */
 }
 
 .swiper-container .left,
@@ -139,13 +123,11 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    /* проміжок між кнопками для мобільних пристроїв */
 }
 
 .swiper-container .custom-swiper-button-prev[disabled],
 .swiper-container .custom-swiper-button-next[disabled] {
     border: 1px solid rgba(250, 250, 250, 0.2);
-
 }
 
 .swiper-container .custom-swiper-button-prev[disabled] svg path,
@@ -160,8 +142,6 @@
     margin-top: 20px;
 }
 
-/* Адаптивна верстка */
-
 @media (min-width: 768px) {
 
     .swiper-container .custom-swiper-button-prev,
@@ -174,7 +154,6 @@
 
     .swiper-container .swiper-navigation {
         gap: 20px;
-        /* проміжок між кнопками для мобільних пристроїв */
     }
 
     .swiper-container .left,
