@@ -41,7 +41,7 @@
 
 .swiper:hover,
 .swiper:active {
-    box-shadow: 0 0 8px #4d070a;
+    box-shadow: 0 0 15px #4d070a;
 }
 /* ================= cnt info ==================== */
 .cnt-projects-info {
@@ -113,17 +113,8 @@
 }
 /* ================= cnt img ==================== */
 /* ================= adaptiv =================== */
-.wraper-projects {
-    min-width: 320px;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
+
 @media screen and (min-width: 768px) {
-.wraper-projects {
-    max-width: 768px;
-    padding: 0 32px;
-    }
 .projects-list {
     margin-bottom: 164px;
     }
@@ -155,11 +146,6 @@
     }
 }
 @media screen and (min-width: 1440px) {
-.wraper-projects {
-    margin-top: 164px;
-    margin-bottom: 164px;
-    max-width: 1440px;
-    }
 .swiper {
         margin-bottom: 64px;
     }
