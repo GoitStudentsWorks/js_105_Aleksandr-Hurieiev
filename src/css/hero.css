@@ -72,6 +72,12 @@ color: #fafafa;
 background-color: transparent;
 }
 
+.heroSection {
+    position: relative;
+}
+
+
+
 
 @media screen and (min-resolution: 192dpi) and (min-width: 768px) {
 .hero {
