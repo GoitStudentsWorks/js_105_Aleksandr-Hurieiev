@@ -2,4 +2,4 @@ import { accordionAboutMe } from './js/about-me';
 import { accordionFaq } from './js/faq';
 
 import { menuAnim } from './js/header';
-import { swiper } from './js/projects.js';
+import './js/projects.js';
