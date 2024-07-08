@@ -32,25 +32,25 @@
 .about__user-img {
 }
 /* ===================== accordion ============================================= */
-.accordion-container {
+.accordion-container_about {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 32px 0;
+  padding: 32px 0 0 0;
 }
-.accordion-container .acc {
+.accordion-container_about .acc {
   box-sizing: border-box;
   padding-bottom: 32px;
   background-color: rgba(28, 28, 28, 0);
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.accordion-container .acc::after {
+.accordion-container_about .acc::after {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
-.accordion-container .acc .ac-header {
+.accordion-container_about .acc .ac-header {
 }
-.accordion-container .acc .acc-trigger {
+.accordion-container_about .acc .acc-trigger {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
@@ -68,7 +68,7 @@
   text-decoration: none;
   border: 0;
 }
-.accordion-container .acc .acc-trigger .ac-span {
+.accordion-container_about .acc .acc-trigger .ac-span {
   background: url(../img/about-me/arrow18.svg) no-repeat center;
   text-align: center;
   width: 15px;
@@ -82,15 +82,15 @@
   width: 36px;
   height: 36px;
 }
-.accordion-container .acc .acc-trigger:focus {
+.accordion-container_about .acc .acc-trigger:focus {
   color: #8a8a8a;
 }
-.accordion-container .acc .acc-panel {
+.accordion-container_about .acc .acc-panel {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
-.accordion-container .acc .acc-panel .ac-text {
+.accordion-container_about .acc .acc-panel .ac-text {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -111,16 +111,47 @@
   gap: 10px;
   padding: 12px 0 20px;
 }
-.accordion-container .acc.js-enabled .acc-panel {
+.accordion-container_about .acc.js-enabled .acc-panel {
   visibility: hidden;
 }
-.accordion-container .acc.is-active .acc-panel {
+.accordion-container_about .acc.is-active .acc-panel {
   visibility: visible;
 }
-.accordion-container .acc.is-active > .ac-header .acc-trigger .ac-span {
+.accordion-container_about .acc.is-active > .ac-header .acc-trigger .ac-span {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 
-/* ================================================================== */
-/* ================================================================== */
+/* ============ swiper ====================================================== */
+.swiper {
+
+}
+.swiper_about {
+  width: 260px;
+  height: 130px;
+}
+.swiper-wrapper {
+}
+.swiper_about-wrapper {
+  display: flex;
+}
+.swiper-slide {
+}
+.swiper_about-slide {
+  width: 130px;
+height: 130px;
+  background-color: red;
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper_about-prev {
+}
+.swiper-button-next {
+
+}
+.swiper_about-next {
+}
+.swiper-scrollbar {
+}
