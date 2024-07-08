@@ -1,3 +1,14 @@
+.benefits-title {
+margin: 0;
+white-space: nowrap;
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: rgba(250, 250, 250, 0.4);
+margin-bottom: 32px;
+}
 .benefits-card {
 border-radius: 20px;
 padding: 24px;
@@ -8,15 +19,6 @@ margin-bottom: 16px;
 }
 .ben-last-card {
 margin-bottom: 0;
-}
-.icon-item {
-border-radius: 10px;
-width: 48px;
-height: 48px;
-background: #ed3b44;
-top: 0;
-left: 0;
-margin-bottom: 64px;
 }
 .ben-card-title {
 font-family: "Inter Tight", sans-serif;
@@ -53,6 +55,19 @@ color: #fafafa;
 text-align: center;
 white-space: nowrap;
 }
+.benefits-item-icon {
+top: 0;
+left: 0;
+border-radius: 10px;
+width: 48px;
+height: 48px;
+background: #ed3b44;
+padding: 12px;
+margin-bottom: 64px;
+}
+.benefits-icon {
+justify-content: center;
+}
 
 /* Tablet */
 @media screen and (min-width: 768px){
@@ -75,13 +90,11 @@ max-width: 704px;
 display: flex; 
 max-width: 1376px;
 height: 675px;
-justify-content: space-between;
+justify-content: space-between; 
 align-items: flex-start;
 box-sizing: border-box;
-}
-.benefits-title {
-margin: 0;
-white-space: nowrap;
+padding-left: 0;
+padding-right: 0;
 }
 .benefits-list {
 justify-content: flex-end;
