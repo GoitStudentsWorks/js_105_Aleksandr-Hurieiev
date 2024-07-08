@@ -37,6 +37,7 @@
   flex-direction: column;
   gap: 32px;
   padding: 32px 0 0 0;
+  margin-bottom: 32px;
 }
 .accordion-container_about .acc {
   box-sizing: border-box;
@@ -123,38 +124,36 @@
 }
 
 /* ============ swiper ====================================================== */
-.swiper_about {
-  position: static;
-  display: flex;
-  height: 130px;
-  width: 260px;
-  margin: 0;
-}
-/* =========== оболочка ======================================================= */
-.swiper_about .swiper_about-wrapper {
-
-}
-/* ============= слайды  ===================================================== */
-.swiper_about .swiper_about-wrapper .swiper_about-slide {
-  width: 130px;
-  height: 130px;
-  background-color: red;
-  border-radius: 50%;
+.cnt-about-skills {
   display: flex;
   align-items: center;
+}
+.swiper_about-slide {
   justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  width: 130px;
+  aspect-ratio: 3/3;
+  cursor: pointer;
 }
-.btn_box{
+li.swiper-slide {
+display: flex;
+}
+.about-skills-text {
+  color:var(--main-text);
+}
+.about-cnt-item {
+  display: flex;
+}
 
-}
-.swiper_about .swiper_about-prev {
-  display: none;
-}
 
-.swiper_about .swiper_about-next {
-  background: url(../img/about-me/arrow18.svg) no-repeat center;
-  width: 20px;
-  height: 20px;
-    display: block;
-
+.cnt-about-skills .swiper_about-next {
+  position: static;
+  margin-left: 70px;
+    
 }
+ /* .swiper_about-next::after {
+   display: none;
+} */
