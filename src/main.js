@@ -9,4 +9,5 @@ import {
     scrollToProjects,
     scrollToFaq,
     scrollToOrder,
+    openMenuBtnClick,
 } from './js/header';
