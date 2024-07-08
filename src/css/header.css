@@ -37,15 +37,17 @@
     cursor: pointer;
 }
 
-a:visited {
+.header-nav-menu:visited {
     text-decoration: underline;
 }
 
-a:hover {
+.header-nav-menu:hover {
     text-decoration: underline;
 }
 
 .header-btn {
+    display: flex;
+    align-items: center;
     margin-right: 32px;
     background: #ed3b44;
     border-radius: 60px;
