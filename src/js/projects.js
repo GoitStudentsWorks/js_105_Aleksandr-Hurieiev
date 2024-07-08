@@ -2,7 +2,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
-export   const swiper = new Swiper('.swiper', {
+export   const swiper = new Swiper('.swiper-projects', {
   
   // Optional parameters
   speed: 500,
