@@ -123,26 +123,38 @@
 }
 
 /* ============ swiper ====================================================== */
-.swiper {
-
-}
 .swiper_about {
-  width: 260px;
-  height: 130px;
-}
-
-.swiper_about .swiper_about-wrapper {
+  position: static;
   display: flex;
+  height: 130px;
+  width: 260px;
+  margin: 0;
 }
+/* =========== оболочка ======================================================= */
+.swiper_about .swiper_about-wrapper {
 
+}
+/* ============= слайды  ===================================================== */
 .swiper_about .swiper_about-wrapper .swiper_about-slide {
   width: 130px;
-height: 130px;
+  height: 130px;
   background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.btn_box{
 
+}
 .swiper_about .swiper_about-prev {
+  display: none;
 }
 
 .swiper_about .swiper_about-next {
+  background: url(../img/about-me/arrow18.svg) no-repeat center;
+  width: 20px;
+  height: 20px;
+    display: block;
+
 }
