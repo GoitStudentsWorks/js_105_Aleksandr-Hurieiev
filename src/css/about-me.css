@@ -123,35 +123,38 @@
 }
 
 /* ============ swiper ====================================================== */
-.swiper {
-
-}
 .swiper_about {
-  width: 260px;
-  height: 130px;
-}
-.swiper-wrapper {
-}
-.swiper_about-wrapper {
+  position: static;
   display: flex;
+  height: 130px;
+  width: 260px;
+  margin: 0;
 }
-.swiper-slide {
-}
-.swiper_about-slide {
-  width: 130px;
-height: 130px;
-  background-color: red;
-}
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.swiper_about-prev {
-}
-.swiper-button-next {
+/* =========== оболочка ======================================================= */
+.swiper_about .swiper_about-wrapper {
 
 }
-.swiper_about-next {
+/* ============= слайды  ===================================================== */
+.swiper_about .swiper_about-wrapper .swiper_about-slide {
+  width: 130px;
+  height: 130px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.swiper-scrollbar {
+.btn_box{
+
+}
+.swiper_about .swiper_about-prev {
+  display: none;
+}
+
+.swiper_about .swiper_about-next {
+  background: url(../img/about-me/arrow18.svg) no-repeat center;
+  width: 20px;
+  height: 20px;
+    display: block;
+
 }
