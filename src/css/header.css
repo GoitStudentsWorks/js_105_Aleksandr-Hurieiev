@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-left: auto;
 }
 
 .header-logo {
@@ -47,12 +46,12 @@ a:hover {
 }
 
 .header-btn {
+    margin-right: 32px;
     background: #ed3b44;
     border-radius: 60px;
     padding: 18px 24px;
     width: 163px;
     height: 55px;
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -87,12 +86,13 @@ a:hover {
     }
 
     .header-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
         min-width: 704px;
     }
 
+    .header-logo {
+        margin-left: 32px;
+    }
+    
     .header-nav-menu {
         display: flex;
         justify-content: space-between;
@@ -142,7 +142,6 @@ a:hover {
     }
 
     .header-container {
-        width: 1376px;
-
+        width: 1440px;
     }
 }
