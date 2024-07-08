@@ -130,28 +130,19 @@
   width: 260px;
   height: 130px;
 }
-.swiper-wrapper {
-}
-.swiper_about-wrapper {
+
+.swiper_about .swiper_about-wrapper {
   display: flex;
 }
-.swiper-slide {
-}
-.swiper_about-slide {
+
+.swiper_about .swiper_about-wrapper .swiper_about-slide {
   width: 130px;
 height: 130px;
   background-color: red;
 }
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.swiper_about-prev {
-}
-.swiper-button-next {
 
+.swiper_about .swiper_about-prev {
 }
-.swiper_about-next {
-}
-.swiper-scrollbar {
+
+.swiper_about .swiper_about-next {
 }
