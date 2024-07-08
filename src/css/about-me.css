@@ -1,4 +1,5 @@
 .about__user {
+  padding: 0;
 }
 .about__user-list {
   gap: 16px;
@@ -6,12 +7,16 @@
   flex-direction: column;
 }
 .about__user-item {
-  min-height: 500px;
+  border-radius: 24px;
+  width: 343px;
+  height: 500px;
 }
 .about__user-item:nth-child(1) {
   border-radius: 24px;
   background: var(--cards);
   padding: 32px 32px 0 32px;
+}
+.about__user-item:nth-child(2) {
 }
 .about__user-text {
   font-family: var(--font-family);
@@ -29,36 +34,30 @@
   color: rgba(250, 250, 250, 0.4);
 }
 .about__user-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 /* ===================== accordion ============================================= */
-.accordion-container {
+.accordion-container_about {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 0 0 0;
 }
-.ac {
-  margin-top: 8px;
-  background-color: rgba(28, 28, 28, 0);
-}
-.ac-header {
-}
-.ac-trigger {
-}
-.ac-panel {
-}
-.ac-text {
-}
-
-.ac {
-  margin-top: 8px;
+.accordion-container_about .acc {
   box-sizing: border-box;
   padding-bottom: 32px;
+  background-color: rgba(28, 28, 28, 0);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
-.ac::after {
-  border-bottom: 1px solid #000;
+
+.accordion-container_about .acc::after {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
-.ac .ac-header {
-  margin: 0;
-  padding: 0;
+.accordion-container_about .acc .ac-header {
 }
-.ac .ac-trigger {
+.accordion-container_about .acc .acc-trigger {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
@@ -67,7 +66,7 @@
   color: rgba(250, 250, 250, 0.4);
   text-align: left;
   width: 100%;
-  padding: 8px 32px 8px 8px;
+  padding: 0 0 12px 0;
   display: block;
   cursor: pointer;
   background-color: transparent;
@@ -76,12 +75,11 @@
   text-decoration: none;
   border: 0;
 }
-.ac .ac-trigger::after {
-  content: url(../img/about-me/arrow.svg);
+.accordion-container_about .acc .acc-trigger .ac-span {
+  background: url(../img/about-me/arrow18.svg) no-repeat center;
   text-align: center;
   width: 15px;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  transform: rotate(180deg) translate(0, 50%);
   position: absolute;
   right: 10px;
   top: 50%;
@@ -91,15 +89,15 @@
   width: 36px;
   height: 36px;
 }
-.ac .ac-trigger:focus {
+.accordion-container_about .acc .acc-trigger:focus {
   color: #8a8a8a;
 }
-.ac .ac-panel {
+.accordion-container_about .acc .acc-panel {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
-.ac .ac-panel .ac-text {
+.accordion-container_about .acc .acc-panel .ac-text {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -107,16 +105,60 @@
   letter-spacing: -0.02em;
   color: var(--main-text);
 }
-.ac.js-enabled .ac-panel {
+.ac-text_about {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 12px 0 20px;
+}
+.ac-text_role,
+.ac-text_education {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0 20px;
+}
+.accordion-container_about .acc.js-enabled .acc-panel {
   visibility: hidden;
 }
-.ac.is-active .ac-panel {
+.accordion-container_about .acc.is-active .acc-panel {
   visibility: visible;
 }
-.ac.is-active > .ac-header .ac-trigger::after {
-  content: url(../img/about-me/arrow.svg);
-  transform: rotate(180deg);
+.accordion-container_about .acc.is-active > .ac-header .acc-trigger .ac-span {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
-/* ================================================================== */
-/* ================================================================== */
+/* ============ swiper ====================================================== */
+.swiper_about {
+  position: static;
+  display: flex;
+  height: 130px;
+  width: 260px;
+  margin: 0;
+}
+/* =========== оболочка ======================================================= */
+.swiper_about .swiper_about-wrapper {
+}
+/* ============= слайды  ===================================================== */
+.swiper_about .swiper_about-wrapper .swiper_about-slide {
+  width: 130px;
+  height: 130px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_box {
+}
+.swiper_about .swiper_about-prev {
+  display: none;
+}
+
+.swiper_about .swiper_about-next {
+  background: url(../img/about-me/arrow18.svg) no-repeat center;
+  width: 20px;
+  height: 20px;
+  display: block;
+}

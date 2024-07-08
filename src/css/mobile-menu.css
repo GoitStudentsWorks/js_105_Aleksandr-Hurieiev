@@ -1,0 +1,120 @@
+.backdrop-mobile {
+    height: 812px;
+    background: #fff;
+    background-image: url('../img/header/Hero.png');
+
+    background-size: contain;
+    background-repeat: repeat-y;
+ 
+    max-width: 375px;
+    top: -32px;
+    left: -16px;
+ 
+   
+    position: absolute;
+    /* pointer-events: none; */
+    /* width: 100%; */
+}
+/* 
+.modal-mobile{
+    width: 100%;
+    height: 100%;
+    
+    } */
+   /* background: linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
+background-position: center; */
+
+/* object-fit: none; */
+/* transform: rotate(-180deg); */
+
+ 
+  /* opacity: 0;
+  visibility: hidden; */
+
+.modal-close-icon {
+    stroke: #fafafa;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+    border: none;
+}
+
+
+.modal-close-btn {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+.modal-close-icon {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+  }
+
+.page-nav-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 302px;
+    width: 67px;
+    height: 112px;
+ 
+  
+}
+
+.navlist-item-mobile {
+    
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+  }
+  
+
+  .modal-btn {
+  
+    margin-bottom: 64px;
+    margin-top: 289px;
+    margin-left: 103px;
+    margin-right: 103px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-btn {
+    padding: 14px 31px;
+    width: 164px;
+    height: 45px;
+    border-radius: 60px;
+    background: #ed3b44;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}

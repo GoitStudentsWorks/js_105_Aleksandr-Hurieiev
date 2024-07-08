@@ -29,8 +29,8 @@ function hideErrorMessage() {
 }
 
 function createReviewCard(review) {
-  const div = document.createElement('div');
-  div.classList.add('reviews-card', 'swiper-slide');
+  const li = document.createElement('li');
+  li.classList.add('reviews-card', 'swiper-slide');
 
   const img = document.createElement('img');
   img.classList.add('reviews-list-avatar');
@@ -52,14 +52,14 @@ function createReviewCard(review) {
 
   box.appendChild(h3);
   box.appendChild(p);
-  div.appendChild(img);
-  div.appendChild(box);
+  li.appendChild(img);
+  li.appendChild(box);
 
-  return div;
+  return li;
 }
 
 async function renderReviews() {
-  const reviewsList = document.querySelector('.swiper-wrapper');
+  const reviewsList = document.getElementById('reviews-list');
   reviews = await fetchReviews();
   console.log('Reviews to render:', reviews);
   if (!reviews || reviews.length === 0) {
@@ -112,8 +112,10 @@ function initSwiper() {
 
         if (swiperInstance.isEnd) {
           nextButton.disabled = true;
+          showErrorMessage(); // Show error message when reaching end
         } else {
           nextButton.disabled = false;
+          hideErrorMessage(); // Hide error message otherwise
         }
       },
     },
@@ -122,34 +124,25 @@ function initSwiper() {
   const nextButton = document.querySelector('.custom-swiper-button-next');
   const prevButton = document.querySelector('.custom-swiper-button-prev');
 
-  function handleNextClick() {
-    if (swiper.isEnd) {
-      showErrorMessage();
-      nextButton.disabled = true;
-      prevButton.disabled = false;
-    }
-  }
-
   function handlePrevClick() {
     hideErrorMessage();
   }
 
-  nextButton.addEventListener('click', handleNextClick);
   prevButton.addEventListener('click', handlePrevClick);
 
+  // Handle keyboard events
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight' || event.key === 'Tab') {
-      handleNextClick();
-    } else if (event.key === 'ArrowLeft') {
+    if (event.key === 'ArrowLeft') {
       handlePrevClick();
     }
   });
 
+  // Handle touch events
   swiper.on('touchEnd', () => {
     if (swiper.isEnd) {
-      handleNextClick();
+      showErrorMessage();
     } else {
-      handlePrevClick();
+      hideErrorMessage();
     }
   });
 }
