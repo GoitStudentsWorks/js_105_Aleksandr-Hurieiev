@@ -16,8 +16,7 @@
   background: var(--cards);
   padding: 32px 32px 0 32px;
 }
-.about__user-item:nth-child(2){
-    
+.about__user-item:nth-child(2) {
 }
 .about__user-text {
   font-family: var(--font-family);
@@ -36,8 +35,8 @@
 }
 .about__user-img {
   max-width: 100%;
-    height: auto;
-    display: block;
+  height: auto;
+  display: block;
 }
 /* ===================== accordion ============================================= */
 .accordion-container_about {
@@ -140,7 +139,6 @@
 }
 /* =========== оболочка ======================================================= */
 .swiper_about .swiper_about-wrapper {
-
 }
 /* ============= слайды  ===================================================== */
 .swiper_about .swiper_about-wrapper .swiper_about-slide {
@@ -152,8 +150,7 @@
   align-items: center;
   justify-content: center;
 }
-.btn_box{
-
+.btn_box {
 }
 .swiper_about .swiper_about-prev {
   display: none;
@@ -163,6 +160,5 @@
   background: url(../img/about-me/arrow18.svg) no-repeat center;
   width: 20px;
   height: 20px;
-    display: block;
-
+  display: block;
 }
