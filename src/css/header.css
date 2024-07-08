@@ -4,21 +4,22 @@
   }
 
 .header-section {
-    min-width: 375px;
-    margin-top: 32px;
+    width: 100%;
     position: absolute;
     top: 0;
-    left: 16px;
+    left: 0;
 }
 
 .header-container {
+    margin-top: 32px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 343px;
+    margin-left: auto;
 }
 
 .header-logo {
+    margin-left: 16px;
     display: flex;
     width: 172px;
     height: 80px;
@@ -36,6 +37,7 @@
     display: none;
     cursor: pointer;
 }
+
 a:visited {
     text-decoration: underline;
 }
@@ -59,8 +61,9 @@ a:hover {
 }
 
 .open-menu-btn{
+    margin-right: 16px;
     stroke: #fafafa;
-    min-width: 28px;
+    width: 28px;
     height: 28px;
     padding: 0;
     line-height: 0;
