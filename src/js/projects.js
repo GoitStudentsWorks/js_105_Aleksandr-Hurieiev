@@ -14,8 +14,8 @@ const swiperProjects = new Swiper('.swiper-projects', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
    },
     keyboard: {
     enabled: true,
