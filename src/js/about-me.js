@@ -16,6 +16,8 @@ import 'swiper/css/bundle';
 import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 
 export const swiperAboutMe = new Swiper('.swiper_about', {
+  wrapperClass: '.swiper_about-wrapper',
+  slideClass: '.swiper_about-slide',
   // Optional parameters
   loop: true,
   slidesPerView: 3,
@@ -23,8 +25,8 @@ export const swiperAboutMe = new Swiper('.swiper_about', {
   direction: 'horizontal',
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper_about-next',
-    prevEl: '.swiper_about-pref',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   keyboard: {
     enabled: true,
