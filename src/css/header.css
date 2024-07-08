@@ -4,21 +4,21 @@
   }
 
 .header-section {
-    min-width: 375px;
-    margin-top: 32px;
+    width: 100%;
     position: absolute;
     top: 0;
-    left: 16px;
+    left: 0;
 }
 
 .header-container {
+    margin-top: 32px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 343px;
 }
 
 .header-logo {
+    margin-left: 16px;
     display: flex;
     width: 172px;
     height: 80px;
@@ -36,21 +36,24 @@
     display: none;
     cursor: pointer;
 }
-a:visited {
+
+.header-nav-menu:visited {
     text-decoration: underline;
 }
 
-a:hover {
+.header-nav-menu:hover {
     text-decoration: underline;
 }
 
 .header-btn {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
     background: #ed3b44;
     border-radius: 60px;
     padding: 18px 24px;
     width: 163px;
     height: 55px;
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -59,8 +62,9 @@ a:hover {
 }
 
 .open-menu-btn{
+    margin-right: 16px;
     stroke: #fafafa;
-    min-width: 28px;
+    width: 28px;
     height: 28px;
     padding: 0;
     line-height: 0;
@@ -84,12 +88,13 @@ a:hover {
     }
 
     .header-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
         min-width: 704px;
     }
 
+    .header-logo {
+        margin-left: 32px;
+    }
+    
     .header-nav-menu {
         display: flex;
         justify-content: space-between;
@@ -139,7 +144,6 @@ a:hover {
     }
 
     .header-container {
-        width: 1376px;
-
+        width: 1440px;
     }
 }
