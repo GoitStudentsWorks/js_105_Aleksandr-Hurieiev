@@ -176,6 +176,9 @@ display: flex;
 .about-skills-text{
   font-size: 20px;
 }
+.about__user-item {
+  height: 700px;
+}
 } 
 
 @media screen and (min-width: 1440px) {
@@ -188,5 +191,47 @@ display: flex;
     .cnt-about-skills .swiper_about-slide {
       width: 200px !important;
     }
-   
+   /* ================================================================== */
+
+   .about__user-item {
+    height: 680px;
+    flex: 0 1 50%;
+  }
+  .about__user-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .about__user-text {
+    font-size: 38px;
+    line-height: 105%;
+  }
+  .about__user-item:nth-child(1) {
+    padding: 64px 64px 0 64px;
+  }
+  .ac-text_about {
+    padding: 8px 68px 32px 0;
+}
+.ac-text_about li:nth-child(1){
+  padding-top: 8px;
+}
+.ac-text_about li:nth-child(2){
+padding-bottom: 32px;
+}
+.ac-text_about {
+  flex: 0 1 50%;
+}
+  .acc-box{
+    display: flex;
+    flex: 0 1 50%;
+  }
+  .accordion-container_about .acc.is-active .acc-panel {
+    display: flex;
+}
+.accordion-container_about .acc.js-enabled .acc-panel {
+
+  display: flex;
+}
+  .accordion-container_about .acc .acc-panel {
+ 
+  }
 } 
