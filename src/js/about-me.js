@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiperAboutMe = new Swiper('.swiper_about', {
     slidesPerView: 2,
     speed: 400,
-    spaceBetween: 0,
+    width: 1200,
     loop: true,
     setWrapperSize: true,
     breakpoints: {
