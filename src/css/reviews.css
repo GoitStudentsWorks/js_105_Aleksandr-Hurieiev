@@ -10,14 +10,14 @@
 
 .reviews-box {
     width: 100%;
-    height: 220px;
+    height: 200px;
 }
 
 .reviews-list {
     display: flex;
     margin-left: 0;
     margin-bottom: 32px;
-}
+ }
 
 .reviews-list-avatar {
     display: flex;
@@ -34,6 +34,8 @@
     background: #1c1d20;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .name-item {
