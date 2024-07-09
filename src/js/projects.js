@@ -2,7 +2,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
-export   const swiper = new Swiper('.swiper-projects', {
+const swiperProjects = new Swiper('.swiper-projects', {
   
   // Optional parameters
   speed: 500,
@@ -14,13 +14,12 @@ export   const swiper = new Swiper('.swiper-projects', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
    },
     keyboard: {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
   },
- 
 });

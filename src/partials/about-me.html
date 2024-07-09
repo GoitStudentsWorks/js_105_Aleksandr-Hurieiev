@@ -1,4 +1,4 @@
-<section class="section about">
+<section id="about_me" class="section about">
   <div class="wraper">
     <h1 class="about__title">About me</h1>
     <!-- ==================================================================== -->
@@ -16,14 +16,15 @@
         <li class="about__user-item">
           <img
             class="about__user-img"
-            src="./img/about-me/mob/image.png"
+            src="./img/about-me/image.png"
+            srcset="./img/about-me/image.png x1, ./img/about-me/image2x.png x2"
             alt="user_foto"
           />
         </li>
       </ul>
     </div>
     <!-- ==================================================================== -->
-    <div class="accordion-container">
+    <div class="accordion-container_about">
       <div class="acc">
         <h2 class="ac-header">
           <button type="button" class="acc-trigger">
@@ -91,6 +92,31 @@
           </ul>
         </div>
       </div>
+    </div>
+    <!-- ============ swiper ======================================================== -->
+
+    <div class="swiper swiper_about">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper swiper_about-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide swiper_about-slide">HTML/CSS</div>
+        <div class="swiper-slide swiper_about-slide">JavaScript</div>
+        <div class="swiper-slide swiper_about-slide">React</div>
+        <div class="swiper-slide swiper_about-slide">Node. js</div>
+        <div class="swiper-slide swiper_about-slide">React Native</div>
+        <div class="swiper-slide swiper_about-slide">Soft skills</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="btn_box">
+        <div class="swiper-button-prev swiper_about-prev"></div>
+        <div class="swiper-button-next swiper_about-next"></div>
+      </div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>

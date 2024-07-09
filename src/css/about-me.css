@@ -7,12 +7,16 @@
   flex-direction: column;
 }
 .about__user-item {
-  min-height: 500px;
+  border-radius: 24px;
+  width: 343px;
+  height: 500px;
 }
 .about__user-item:nth-child(1) {
   border-radius: 24px;
   background: var(--cards);
   padding: 32px 32px 0 32px;
+}
+.about__user-item:nth-child(2) {
 }
 .about__user-text {
   font-family: var(--font-family);
@@ -30,27 +34,30 @@
   color: rgba(250, 250, 250, 0.4);
 }
 .about__user-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 /* ===================== accordion ============================================= */
-.accordion-container {
+.accordion-container_about {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 32px 0;
+  padding: 32px 0 0 0;
 }
-.accordion-container .acc {
+.accordion-container_about .acc {
   box-sizing: border-box;
   padding-bottom: 32px;
   background-color: rgba(28, 28, 28, 0);
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.accordion-container .acc::after {
+.accordion-container_about .acc::after {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
-.accordion-container .acc .ac-header {
+.accordion-container_about .acc .ac-header {
 }
-.accordion-container .acc .acc-trigger {
+.accordion-container_about .acc .acc-trigger {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
@@ -68,7 +75,7 @@
   text-decoration: none;
   border: 0;
 }
-.accordion-container .acc .acc-trigger .ac-span {
+.accordion-container_about .acc .acc-trigger .ac-span {
   background: url(../img/about-me/arrow18.svg) no-repeat center;
   text-align: center;
   width: 15px;
@@ -82,15 +89,15 @@
   width: 36px;
   height: 36px;
 }
-.accordion-container .acc .acc-trigger:focus {
+.accordion-container_about .acc .acc-trigger:focus {
   color: #8a8a8a;
 }
-.accordion-container .acc .acc-panel {
+.accordion-container_about .acc .acc-panel {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
-.accordion-container .acc .acc-panel .ac-text {
+.accordion-container_about .acc .acc-panel .ac-text {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
@@ -111,16 +118,47 @@
   gap: 10px;
   padding: 12px 0 20px;
 }
-.accordion-container .acc.js-enabled .acc-panel {
+.accordion-container_about .acc.js-enabled .acc-panel {
   visibility: hidden;
 }
-.accordion-container .acc.is-active .acc-panel {
+.accordion-container_about .acc.is-active .acc-panel {
   visibility: visible;
 }
-.accordion-container .acc.is-active > .ac-header .acc-trigger .ac-span {
+.accordion-container_about .acc.is-active > .ac-header .acc-trigger .ac-span {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 
-/* ================================================================== */
-/* ================================================================== */
+/* ============ swiper ====================================================== */
+.swiper_about {
+  position: static;
+  display: flex;
+  height: 130px;
+  width: 260px;
+  margin: 0;
+}
+/* =========== оболочка ======================================================= */
+.swiper_about .swiper_about-wrapper {
+}
+/* ============= слайды  ===================================================== */
+.swiper_about .swiper_about-wrapper .swiper_about-slide {
+  width: 130px;
+  height: 130px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_box {
+}
+.swiper_about .swiper_about-prev {
+  display: none;
+}
+
+.swiper_about .swiper_about-next {
+  background: url(../img/about-me/arrow18.svg) no-repeat center;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
