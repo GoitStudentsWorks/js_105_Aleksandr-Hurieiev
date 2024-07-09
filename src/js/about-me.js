@@ -14,42 +14,35 @@ export const accordionAboutMe = new Accordion('.accordion-container_about', {
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
-export const swiperAboutMe = new Swiper('.swiper_about', {
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = document.querySelectorAll('.swiper_about-slide');
+  const swiperWrapper = document.querySelector('.swiper_about-wrapper');
+  
+  slides.forEach(slide => swiperWrapper.append(slide.cloneNode(true)));
+
+  const swiperAboutMe = new Swiper('.swiper_about', {
+    slidesPerView: 2,
     speed: 400,
     spaceBetween: 0,
     loop: true,
     setWrapperSize: true,
-     watchOverflow: true,
-  breakpoints: {
-    1440: {
-      slidesPerView: 6,
+    breakpoints: {
+      768: { slidesPerView: 3 },
+      1440: { slidesPerView: 6 }
     },
-    768: {
-      slidesPerView: 3,
-    },
-    320: {
-      slidesPerView: 2,
-    },
-  },
-  navigation: {
-      nextEl: '.swiper_about-next',
-      prevEl: '.swiper_about-prev',
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-  },
-  on: {
+    navigation: { nextEl: '.swiper_about-next' },
+    keyboard: { enabled: true, onlyInViewport: true },
+    on: {
       init: function () {
-        document.querySelector('.swiper_about-slide').style.backgroundColor =
-          '#ed3b44';
+        this.slides[this.activeIndex].style.backgroundColor = '#ed3b44';
       },
       slideChange: function () {
-        const previousSlide = this.slides[this.previousIndex];
-        const activeSlide = this.slides[this.activeIndex];
-        previousSlide.style.background = '';
-        activeSlide.style.backgroundColor = '#ed3b44';
-      },
-    },
-});
+        this.slides.forEach(slide => slide.style.backgroundColor = '');
+        this.slides[this.activeIndex].style.backgroundColor = '#ed3b44';
+      }
+    }
+  });
 
+  const btnNext = document.querySelector('.swiper_about-next');
+  btnNext.addEventListener('click', () => swiperAboutMe.slideNext());
+});

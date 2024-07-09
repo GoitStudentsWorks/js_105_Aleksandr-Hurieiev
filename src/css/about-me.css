@@ -127,7 +127,6 @@
 .cnt-about-skills {
   display: flex;
   align-items: center;
- 
 }
 .swiper_about-slide {
   justify-content: center;
@@ -141,7 +140,6 @@
 }
 li.swiper-slide {
 display: flex;
-width: 130px;
 }
 .about-skills-text {
   color:var(--main-text);
@@ -150,19 +148,18 @@ width: 130px;
   font-size: 16px;
   font-weight: 500px;
 }
-.about-cnt-item {
-  display: flex;
-}
-
-
 .cnt-about-skills .swiper_about-next {
   position: static;
   margin-left: 55px;
-    
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
- /* .swiper_about-next::after {
-   display: none;
-} */
+ .swiper_about-next::after {
+  /* display: none; */
+}
+.about-skills-btn-icon {
+}
 @media screen and (min-width: 768px) {
 .cnt-about-skills .swiper_about-next {
   margin-left: 64px;
@@ -172,16 +169,17 @@ width: 130px;
 .about-skills-text{
   font-size: 20px;
 }
- li.swiper-slide {
-   width: 200px !important;
- }
-}
+} 
 
 @media screen and (min-width: 1440px) {
   .cnt-about-skills .swiper_about-next {
     margin-left: 72px;
   }
-  .cnt-about-skills {
-  }
- 
-}
+    .cnt-about-skills {
+      margin-left: 32px;
+    }
+    .cnt-about-skills .swiper_about-slide {
+      width: 200px !important;
+    }
+   
+} 
