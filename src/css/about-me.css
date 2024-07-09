@@ -44,6 +44,7 @@
   flex-direction: column;
   gap: 32px;
   padding: 32px 0 0 0;
+  margin-bottom: 32px;
 }
 .accordion-container_about .acc {
   box-sizing: border-box;
@@ -130,35 +131,62 @@
 }
 
 /* ============ swiper ====================================================== */
-.swiper_about {
-  position: static;
-  display: flex;
-  height: 130px;
-  width: 260px;
-  margin: 0;
-}
-/* =========== оболочка ======================================================= */
-.swiper_about .swiper_about-wrapper {
-}
-/* ============= слайды  ===================================================== */
-.swiper_about .swiper_about-wrapper .swiper_about-slide {
-  width: 130px;
-  height: 130px;
-  background-color: red;
-  border-radius: 50%;
+.cnt-about-skills {
   display: flex;
   align-items: center;
+}
+.swiper_about-slide {
   justify-content: center;
-}
-.btn_box {
-}
-.swiper_about .swiper_about-prev {
-  display: none;
-}
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  aspect-ratio: 3/3;
+  cursor: pointer;
 
-.swiper_about .swiper_about-next {
-  background: url(../img/about-me/arrow18.svg) no-repeat center;
-  width: 20px;
-  height: 20px;
-  display: block;
 }
+li.swiper-slide {
+display: flex;
+}
+.about-skills-text {
+  color:var(--main-text);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 500px;
+}
+.cnt-about-skills .swiper_about-next {
+  position: static;
+  margin-left: 55px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+ .swiper_about-next::after {
+  /* display: none; */
+}
+.about-skills-btn-icon {
+}
+@media screen and (min-width: 768px) {
+.cnt-about-skills .swiper_about-next {
+  margin-left: 64px;
+  width: 40px;
+  height: 40px;
+}
+.about-skills-text{
+  font-size: 20px;
+}
+} 
+
+@media screen and (min-width: 1440px) {
+  .cnt-about-skills .swiper_about-next {
+    margin-left: 72px;
+  }
+    .cnt-about-skills {
+      margin-left: 32px;
+    }
+    .cnt-about-skills .swiper_about-slide {
+      width: 200px !important;
+    }
+   
+} 
