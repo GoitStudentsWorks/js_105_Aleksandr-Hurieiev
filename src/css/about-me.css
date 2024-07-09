@@ -134,15 +134,21 @@
   background-color: transparent;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
-  width: 130px;
+  
   aspect-ratio: 3/3;
   cursor: pointer;
+
 }
 li.swiper-slide {
 display: flex;
+width: 130px;
 }
 .about-skills-text {
   color:var(--main-text);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 500px;
 }
 .about-cnt-item {
   display: flex;
@@ -151,9 +157,25 @@ display: flex;
 
 .cnt-about-skills .swiper_about-next {
   position: static;
-  margin-left: 70px;
+  margin-left: 55px;
     
 }
  /* .swiper_about-next::after {
    display: none;
 } */
+@media screen and (min-width: 768px) {
+.cnt-about-skills .swiper_about-next {
+  margin-left: 64px;
+  width: 40px;
+  height: 40px;
+}
+.about-skills-text{
+  font-size: 20px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+  .cnt-about-skills .swiper_about-next {
+    margin-left: 72px;
+  }
+}
