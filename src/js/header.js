@@ -31,6 +31,14 @@ export const menuAnim = refs.menu.addEventListener('click', (e) => {
     toggleMenu(e, refs.menuItems, false);
 })
 
+export const menuOnResize = window.onresize = () => {
+    if (window.innerWidth >= 768) {
+        refs.menuItems.classList.remove('hidden');
+    } else {
+        refs.menuItems.classList.add('hidden');
+    }
+}
+
 // Smooth scrolls
 ///////////////////
 
@@ -101,18 +109,18 @@ export const closeMenuBtnClick = refs.closeMenuBtn.addEventListener('click', (e)
 
 function toggleMenu(e, menu, stopScroll = true) {
     e.preventDefault();
-    toggleClass(menu, 'hidden');
+    menu.classList.toggle('hidden');
     if (stopScroll) {
-        toggleClass(document.documentElement, 'noScroll');
-        toggleClass(document.body, 'noScroll');
+        document.documentElement.classList.toggle('noScroll');
+        document.body.classList.toggle('noScroll');
     }
 }
 
 function closeMenu(e, element) {
     e.preventDefault();
-    addClass(element, 'hidden');
-    removeClass(document.documentElement, 'noScroll');
-    removeClass(document.body, 'noScroll');
+    element.classList.add('hidden');
+    document.documentElement.classList.remove('noScroll');
+    document.body.classList.remove('noScroll');
 }
 
 function smoothScrollTo(e, element) {
@@ -120,24 +128,4 @@ function smoothScrollTo(e, element) {
     element.scrollIntoView({
         behavior: 'smooth'
     });
-}
-
-function toggleClass(element, className) {
-    if (element.classList.contains(className) == true) {
-        element.classList.remove(className);
-    } else {
-        element.classList.add(className);
-    }
-}
-
-function addClass(element, className) {
-    if (element.classList.contains(className) == false) {
-        element.classList.add(className);
-    }
-}
-
-function removeClass(element, className) {
-    if (element.classList.contains(className) == true) {
-        element.classList.remove(className);
-    }
 }
