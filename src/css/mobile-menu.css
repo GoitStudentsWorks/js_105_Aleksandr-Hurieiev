@@ -12,6 +12,14 @@
     display: flex;
     flex-direction: column;
 }
+.backdrop-mobile {
+  opacity: 0;
+  animation: ani 0.7s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 .modal-close-btn {
     width: 28px;
