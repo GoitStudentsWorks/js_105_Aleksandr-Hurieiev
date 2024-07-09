@@ -94,29 +94,34 @@
       </div>
     </div>
     <!-- ============ swiper ======================================================== -->
-
-    <div class="swiper swiper_about">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper swiper_about-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide swiper_about-slide">HTML/CSS</div>
-        <div class="swiper-slide swiper_about-slide">JavaScript</div>
-        <div class="swiper-slide swiper_about-slide">React</div>
-        <div class="swiper-slide swiper_about-slide">Node. js</div>
-        <div class="swiper-slide swiper_about-slide">React Native</div>
-        <div class="swiper-slide swiper_about-slide">Soft skills</div>
+    <div class="cnt-about-skills">
+      <div class="swiper swiper_about">
+        <ul class="swiper-wrapper swiper_about-wrapper">
+          <li class="swiper-slide swiper_about-slide">
+            <p class="about-skills-text">HTML/CSS</p>
+          </li>
+          <li class="swiper-slide swiper_about-slide">
+            <p class="about-skills-text">React</p>
+          </li>
+          <li class="swiper-slide swiper_about-slide">
+            <p class="about-skills-text">Node. js</p>
+          </li>
+          <li class="swiper-slide swiper_about-slide">
+            <p class="about-skills-text">React Native</p>
+          </li>
+          <li class="swiper-slide swiper_about-slide">
+            <p class="about-skills-text">Soft skills</p>
+          </li>
+          <li class="swiper-slide swiper_about-slide">
+            <p class="about-skills-text">JavaScript</p>
+          </li>
+        </ul>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="btn_box">
-        <div class="swiper-button-prev swiper_about-prev"></div>
-        <div class="swiper-button-next swiper_about-next"></div>
+      <div class="swiper-button-next swiper_about-next">
+        <svg class="about-skills-btn-icon" width="40" height="40">
+          <use href="./img/about-me/btn.svg#icon-UserTesting"></use>
+        </svg>
       </div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>
