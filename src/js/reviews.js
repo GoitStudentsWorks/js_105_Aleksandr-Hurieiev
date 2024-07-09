@@ -75,9 +75,11 @@ async function renderReviews() {
 }
 
 function initSwiper() {
+  let endReached = false;
+
   const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 12,
+    spaceBetween: 14,
     navigation: {
       nextEl: '.custom-swiper-button-next',
       prevEl: '.custom-swiper-button-prev',
@@ -104,19 +106,10 @@ function initSwiper() {
         const prevButton = document.querySelector('.custom-swiper-button-prev');
         const nextButton = document.querySelector('.custom-swiper-button-next');
 
-        if (swiperInstance.isBeginning) {
-          prevButton.disabled = true;
-        } else {
-          prevButton.disabled = false;
-        }
-
-        if (swiperInstance.isEnd) {
-          nextButton.disabled = true;
-          showErrorMessage(); // Show error message when reaching end
-        } else {
-          nextButton.disabled = false;
-          hideErrorMessage(); // Hide error message otherwise
-        }
+        prevButton.disabled = swiperInstance.isBeginning;
+        nextButton.disabled = false;
+        hideErrorMessage();
+        endReached = false;
       },
     },
   });
@@ -128,19 +121,29 @@ function initSwiper() {
     hideErrorMessage();
   }
 
-  prevButton.addEventListener('click', handlePrevClick);
+  function handleNextClick() {
+    if (endReached) {
+      showErrorMessage();
+      nextButton.disabled = true;
+    } else if (swiper.isEnd) {
+      endReached = true;
+    }
+  }
 
-  // Handle keyboard events
+  prevButton.addEventListener('click', handlePrevClick);
+  nextButton.addEventListener('click', handleNextClick);
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {
       handlePrevClick();
+    } else if (event.key === 'ArrowRight') {
+      handleNextClick();
     }
   });
 
-  // Handle touch events
   swiper.on('touchEnd', () => {
     if (swiper.isEnd) {
-      showErrorMessage();
+      endReached = true;
     } else {
       hideErrorMessage();
     }
