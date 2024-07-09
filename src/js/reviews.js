@@ -79,7 +79,7 @@ function initSwiper() {
 
   const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 14,
+    spaceBetween: 16,
     navigation: {
       nextEl: '.custom-swiper-button-next',
       prevEl: '.custom-swiper-button-prev',
@@ -91,9 +91,11 @@ function initSwiper() {
     breakpoints: {
       768: {
         slidesPerView: 2,
+        spaceBetween: 20,
       },
       1440: {
         slidesPerView: 4,
+        spaceBetween: 16,
       },
     },
     on: {
@@ -108,6 +110,7 @@ function initSwiper() {
 
         prevButton.disabled = swiperInstance.isBeginning;
         nextButton.disabled = false;
+
         hideErrorMessage();
         endReached = false;
       },
@@ -143,7 +146,12 @@ function initSwiper() {
 
   swiper.on('touchEnd', () => {
     if (swiper.isEnd) {
-      endReached = true;
+      if (endReached) {
+        showErrorMessage();
+        nextButton.disabled = true;
+      } else {
+        endReached = true;
+      }
     } else {
       hideErrorMessage();
     }
