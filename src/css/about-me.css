@@ -142,13 +142,12 @@
   border-radius: 100px;
   aspect-ratio: 3/3;
   cursor: pointer;
-
 }
 li.swiper-slide {
-display: flex;
+  display: flex;
 }
 .about-skills-text {
-  color:var(--main-text);
+  color: var(--main-text);
   line-height: 150%;
   letter-spacing: -0.02em;
   font-size: 16px;
@@ -161,38 +160,38 @@ display: flex;
   cursor: pointer;
   background-color: transparent;
 }
- .swiper_about-next::after {
+.swiper_about-next::after {
   /* display: none; */
 }
 .about-skills-btn-icon {
 }
 @media screen and (min-width: 768px) {
-.cnt-about-skills .swiper_about-next {
-  margin-left: 64px;
-  width: 40px;
-  height: 40px;
+  .cnt-about-skills .swiper_about-next {
+    margin-left: 64px;
+    width: 40px;
+    height: 40px;
+  }
+  .about-skills-text {
+    font-size: 20px;
+  }
+  .about__user-item {
+    height: 700px;
+  }
 }
-.about-skills-text{
-  font-size: 20px;
-}
-.about__user-item {
-  height: 700px;
-}
-} 
 
 @media screen and (min-width: 1440px) {
   .cnt-about-skills .swiper_about-next {
     margin-left: 72px;
   }
-    .cnt-about-skills {
-      margin-left: 32px;
-    }
-    .cnt-about-skills .swiper_about-slide {
-      width: 200px !important;
-    }
-   /* ================================================================== */
+  .cnt-about-skills {
+    margin-left: 32px;
+  }
+  .cnt-about-skills .swiper_about-slide {
+    width: 200px !important;
+  }
+  /* ================================================================== */
 
-   .about__user-item {
+  .about__user-item {
     height: 680px;
     flex: 0 1 50%;
   }
@@ -209,28 +208,26 @@ display: flex;
   }
   .ac-text_about {
     padding: 8px 68px 32px 0;
-}
-.ac-text_about li:nth-child(1){
-  padding-top: 8px;
-}
-.ac-text_about li:nth-child(2){
-padding-bottom: 32px;
-}
-.ac-text_about {
-  flex: 0 1 50%;
-}
-  .acc-box{
+  }
+  .ac-text_about li:nth-child(1) {
+    padding-top: 8px;
+  }
+  .ac-text_about li:nth-child(2) {
+    padding-bottom: 32px;
+  }
+  .ac-text_about {
+    flex: 0 1 50%;
+  }
+  .acc-box {
     display: flex;
     flex: 0 1 50%;
   }
   .accordion-container_about .acc.is-active .acc-panel {
     display: flex;
-}
-.accordion-container_about .acc.js-enabled .acc-panel {
-
-  display: flex;
-}
-  .accordion-container_about .acc .acc-panel {
- 
   }
-} 
+  .accordion-container_about .acc.js-enabled .acc-panel {
+    display: flex;
+  }
+  .accordion-container_about .acc .acc-panel {
+  }
+}
