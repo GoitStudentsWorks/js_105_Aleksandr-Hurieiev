@@ -1,4 +1,3 @@
-/* styles for swiper-container, buttons, and review cards */
 .mask-one,
 .mask-two,
 .mask-three {
@@ -11,6 +10,7 @@
 
 .reviews-box {
     width: 100%;
+    height: 200px;
 }
 
 .reviews-list {
@@ -123,14 +123,22 @@
     gap: 12px;
 }
 
-.swiper-container .custom-swiper-button-prev[disabled],
-.swiper-container .custom-swiper-button-next[disabled] {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-}
-
 .swiper-container .custom-swiper-button-prev[disabled] svg path,
 .swiper-container .custom-swiper-button-next[disabled] svg path {
     stroke: #3b3b3b;
+    /* Змінюємо колір стрілочки на тьмяний */
+}
+
+.swiper-container .custom-swiper-button-prev[disabled],
+.swiper-container .custom-swiper-button-next[disabled] {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    /* Змінюємо колір кнопки на тьмяний */
+}
+
+.swiper-container .custom-swiper-button-prev svg path,
+.swiper-container .custom-swiper-button-next svg path {
+    stroke: #fafafa;
+    /* Колір стрілочки в активному стані */
 }
 
 .error-message {
