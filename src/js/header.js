@@ -23,8 +23,6 @@ const refs = {
     targetProjects: document.querySelector('#projects'),
     targetFaq: document.querySelector('#faq-section'),
     targetOrder: document.querySelector('#work-together'),
-    
-    
 }
 
 export const menuAnim = refs.menu.addEventListener('click', (e) => {
@@ -33,8 +31,26 @@ export const menuAnim = refs.menu.addEventListener('click', (e) => {
 
 export const menuOnResize = window.onresize = () => {
     if (window.innerWidth >= 768) {
-        refs.menuItems.classList.remove('hidden');
+        if (refs.mobileMenu.classList.contains('fadeIn')) {
+            refs.mobileMenu.classList.remove('fadeIn');
+            refs.mobileMenu.classList.add('hidden');
+
+            refs.menuItems.classList.remove('hidden');
+            refs.menuItems.classList.remove('fadeOut');
+            refs.menuItems.classList.add('fadeIn');
+        }
     } else {
+        if (refs.menuItems.classList.contains('fadeIn')) {
+            refs.menuItems.classList.remove('fadeIn');
+            refs.menuItems.classList.add('hidden');
+
+            refs.mobileMenu.classList.remove('hidden');
+            refs.mobileMenu.classList.remove('fadeOut');
+            refs.mobileMenu.classList.add('fadeIn');
+        }
+    }
+
+    if (window.innerWidth < 768) {
         refs.menuItems.classList.add('hidden');
     }
 }
@@ -107,18 +123,23 @@ export const closeMenuBtnClick = refs.closeMenuBtn.addEventListener('click', (e)
 // Help functions.
 ///////////////////
 
-function toggleMenu(e, menu, stopScroll = true) {
+function toggleMenu(e, menu) {
     e.preventDefault();
-    menu.classList.toggle('hidden');
-    if (stopScroll) {
-        document.documentElement.classList.toggle('noScroll');
-        document.body.classList.toggle('noScroll');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.toggle('fadeIn');
+    } else {
+        menu.classList.toggle('fadeIn');
+        menu.classList.toggle('fadeOut');
     }
+    document.documentElement.classList.toggle('noScroll');
+    document.body.classList.toggle('noScroll');
 }
 
 function closeMenu(e, element) {
     e.preventDefault();
-    element.classList.add('hidden');
+    element.classList.remove('fadeIn');
+    element.classList.add('fadeOut');
     document.documentElement.classList.remove('noScroll');
     document.body.classList.remove('noScroll');
 }
