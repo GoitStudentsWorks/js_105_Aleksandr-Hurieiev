@@ -7,12 +7,16 @@
   flex-direction: column;
 }
 .about__user-item {
-  min-height: 500px;
+  border-radius: 24px;
+  width: 343px;
+  height: 500px;
 }
 .about__user-item:nth-child(1) {
   border-radius: 24px;
   background: var(--cards);
   padding: 32px 32px 0 32px;
+}
+.about__user-item:nth-child(2) {
 }
 .about__user-text {
   font-family: var(--font-family);
@@ -30,6 +34,9 @@
   color: rgba(250, 250, 250, 0.4);
 }
 .about__user-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 /* ===================== accordion ============================================= */
 .accordion-container_about {
