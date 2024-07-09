@@ -127,6 +127,7 @@
 .cnt-about-skills {
   display: flex;
   align-items: center;
+ 
 }
 .swiper_about-slide {
   justify-content: center;
@@ -134,7 +135,6 @@
   background-color: transparent;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
-  
   aspect-ratio: 3/3;
   cursor: pointer;
 
@@ -172,10 +172,16 @@ width: 130px;
 .about-skills-text{
   font-size: 20px;
 }
+ li.swiper-slide {
+   width: 200px !important;
+ }
 }
 
 @media screen and (min-width: 1440px) {
   .cnt-about-skills .swiper_about-next {
     margin-left: 72px;
   }
+  .cnt-about-skills {
+  }
+ 
 }

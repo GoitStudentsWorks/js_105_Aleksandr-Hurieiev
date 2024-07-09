@@ -19,7 +19,7 @@ export const swiperAboutMe = new Swiper('.swiper_about', {
     spaceBetween: 0,
     loop: true,
     setWrapperSize: true,
-    
+     watchOverflow: true,
   breakpoints: {
     1440: {
       slidesPerView: 6,
