@@ -165,7 +165,8 @@ li.swiper-slide {
   display: none;
 }
 .about-skills-btn-icon {
-  fill: rgba(250, 250, 250, 0.2);;
+  stroke: rgba(250, 250, 250, 0.2);
+  fill: rgba(250, 250, 250, 0.2);
 }
 
 @media screen and (min-width: 768px) {
