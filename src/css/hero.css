@@ -6,11 +6,12 @@ padding-bottom: 32px;
 
 .hero {
     margin-bottom: 64px;
-background-size: cover;
-background-image: 
-url('../img/hero/rectangle-mob.jpg');
+background-image: image-set(
+      url("../img/hero/hero-mob@1x.png") 1x,
+      url("../img/hero/hero-mob@2x.png") 2x);
 background-repeat: no-repeat;
-background-position: center;
+background-position: left top;
+background-size: initial;
 }
 
 .hero-link {
@@ -78,7 +79,9 @@ background-color: transparent;
 @media screen and (min-width: 768px) {
 .hero {
     margin-bottom: 94px;
-background-image: url('../img/hero/rectangle-tabl.jpg');
+    background-image: image-set(
+        url("../img/hero/hero-tab@1x.png") 1x,
+        url("../img/hero/hero-tab@2x.png") 2x);
          }
 .hero-container {
 padding-top: 300px;
@@ -130,7 +133,9 @@ height: 55px;
 
 @media screen and (min-width: 1440px) {
 .hero {
-background-image: url('../img/hero/rectangle-desk.jpg');
+    background-image: image-set(
+        url("../img/hero/hero-desk@1x.png") 1x,
+        url("../img/hero/hero-desk@2x.png") 2x);
 }
     
 .social-list-link {
