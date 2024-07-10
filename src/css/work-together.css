@@ -1,0 +1,307 @@
+.footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-image: url('../img/work-together/background.png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.footer-title {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 4px;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    max-width: 278px;
+    margin-bottom: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer {
+        padding-top: 80px;
+        padding-bottom: 169px;
+    }
+
+    .footer-title {
+        column-gap: 14px;
+        row-gap: 7px;
+        max-width: 542px;
+        font-size: 64px;
+        margin-bottom: 18px;
+    }
+}
+
+.footer-title-color {
+    color: #ed3b44;
+}
+
+.footer-form {
+    margin-bottom: 64px;
+}
+
+.footer-form-input {
+    width: 100%;
+    height: 44px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    transition: border-bottom linear 250ms;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.email-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+    .email-input-container {
+        width: 100%;
+    }
+}
+
+.email-input-container input:not(:placeholder-shown):valid + .valid-input::after{
+    content: "Succes!";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: #3CBC81;
+    position: absolute;
+    left: 0;
+    top: 94px;
+}
+
+.email-input-container input:not(:placeholder-shown):valid{
+    border-color: #3CBC81;
+}
+
+.email-input-container input:not(:placeholder-shown):invalid + .valid-input::after {
+    content: "Invalid email, try again";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: #E74A3B;
+    position: absolute;
+    left: 0;
+    top: 94px;
+}
+
+.email-input-container input:not(:placeholder-shown):invalid{
+    border-color: #E74A3B;
+}
+
+@media only screen and (max-width: 767px) {
+    .email-input-container input:not(:placeholder-shown):valid+.valid-input::after,
+    .email-input-container input:not(:placeholder-shown):invalid+.valid-input::after {
+        top: 44px;
+    }
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.footer-form-input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    transition: color 250ms linear;
+}
+
+.footer-form-input:hover::placeholder,
+.footer-form-input:focus::placeholder {
+    color: #fafafa;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-form-input:first-child {
+        margin-bottom: 16px;
+    }
+
+    .footer-form-input:nth-child(2) {
+        margin-bottom: 32px;
+    }
+}
+
+.footer-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #ed3b44;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-form {
+        display: flex;
+        position: relative;
+        margin-bottom: 18px;
+    }
+
+    .footer-form-input {
+        margin-top: 46px;
+        width: 245px;
+        margin-right: 32px;
+    }
+
+    .footer-btn {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+    background-color: #e0373f;
+}
+
+.footer-contact-list {
+    display: flex;
+    gap: 4px;
+}
+
+.footer-contact-list-item {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 12px;
+    transition: border-color 250ms linear;
+}
+
+.footer-contact-list-link {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.footer-contact-list-item:hover,
+.footer-contact-list-item:focus {
+    border-color: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-contact-list {
+        gap: 8px;
+    }
+
+    .footer-contact-list-item {
+        padding: 18px 32px;
+    }
+
+    .footer-contact-list-link {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .footer-wraper {
+        padding-left: 196px;
+        padding-right: 196px;
+    }
+
+    .footer-title {
+        column-gap: 20px;
+    }
+
+    .footer-form-input {
+        width: 390px;
+    }
+}
+
+.footer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background-color: rgba(15, 15, 16, 0.6);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.footer-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 20px;
+    padding: 64px 32px;
+    width: 343px;
+    background: #1c1d20;
+    transition: transform 250ms linear;
+}
+
+.footer-modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    stroke: #ffff;
+    background-color: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-modal-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fafafa;
+    padding-bottom: 16px;
+}
+
+.footer-modal-message {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(250, 250, 250, 0.6);
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-modal {
+        width: 492px;
+        height: 246px;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .footer-modal-close-btn {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-modal-title {
+        width: 364px;
+    }
+}
