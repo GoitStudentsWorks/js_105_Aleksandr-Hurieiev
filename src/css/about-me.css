@@ -75,20 +75,21 @@
   text-decoration: none;
   border: 0;
 }
+
 .accordion-container_about .acc .acc-trigger .ac-span {
-  background: url(../img/about-me/arrow18.svg) no-repeat center;
-  text-align: center;
-  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform: rotate(180deg) translate(0, 50%);
   position: absolute;
   right: 10px;
   top: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
-  padding: 9px;
   width: 36px;
   height: 36px;
 }
+
 .accordion-container_about .acc .acc-trigger:focus {
   color: #8a8a8a;
 }
