@@ -156,11 +156,10 @@ li.swiper-slide {
   font-weight: 500px;
 }
 
- .swiper_about-next {
+.swiper-box .swiper_about-next {
   background-color: transparent;
   width: 28px;
   height: 28px;
-
 }
 .swiper_about-next::after {
   display: none;
@@ -170,7 +169,7 @@ li.swiper-slide {
 }
 
 @media screen and (min-width: 768px) {
-.swiper_about-next {
+.swiper-box .swiper_about-next {
     width: 40px;
     height: 40px;
 
@@ -190,8 +189,8 @@ li.swiper-slide {
   .swiper-box{
     padding: 0 32px;
   }
- .swiper_about-next {
-
+  .swiper-box .swiper_about-next {
+ 
   }
   .cnt-about-skills {
     padding-right: 112px;
