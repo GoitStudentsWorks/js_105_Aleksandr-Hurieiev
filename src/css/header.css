@@ -12,10 +12,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .header-container {
-    margin-top: 32px;
+    padding-top: 32px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -30,7 +31,6 @@
 }
 
 .header-logo {
-    margin-left: 16px;
     display: flex;
     width: 172px;
     height: 80px;
@@ -60,10 +60,9 @@
 .header-btn {
     display: flex;
     align-items: center;
-    margin-right: 32px;
+    justify-content: center;
     background: #ed3b44;
     border-radius: 60px;
-    padding: 18px 24px;
     width: 163px;
     height: 55px;
     font-weight: 500;
@@ -74,7 +73,6 @@
 }
 
 .open-menu-btn {
-    margin-right: 16px;
     stroke: #fafafa;
     width: 28px;
     height: 28px;
@@ -124,10 +122,6 @@
         min-width: 704px;
     }
 
-    .header-logo {
-        margin-left: 32px;
-    }
-    
     .header-nav-menu {
         display: flex;
         justify-content: space-between;
