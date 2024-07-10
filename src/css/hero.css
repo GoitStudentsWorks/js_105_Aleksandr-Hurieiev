@@ -5,6 +5,7 @@ padding-bottom: 32px;
 }
 
 .hero {
+    margin-bottom: 64px;
 background-size: cover;
 background-image: 
 url('../img/hero/rectangle-mob.jpg');
@@ -78,8 +79,9 @@ background-color: transparent;
 
 
 
-@media screen and (min-resolution: 192dpi) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 .hero {
+    margin-bottom: 94px;
 background-image: url('../img/hero/rectangle-tabl.jpg');
          }
 .hero-container {
