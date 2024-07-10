@@ -108,14 +108,6 @@
 /* ///////////// */
 
 @media only screen and (min-width: 768px) {
-    .header-section {
-        min-width: 768px;
-    }
-
-    .header-container {
-        min-width: 704px;
-    }
-
     .header-nav-menu {
         display: flex;
         justify-content: space-between;
@@ -146,15 +138,5 @@
 
     .open-menu-btn {
         display: none;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .header-section {
-        min-width: 1140px;
-    }
-
-    .header-container {
-        width: 1440px;
     }
 }
