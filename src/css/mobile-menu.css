@@ -3,8 +3,8 @@
     height: 100vh;
     background: #fff;
     background-image: image-set(
-      url("./img/header/menu@.png") 1x,
-      url("./img/header/menu@2x.png") 2x);
+      url("../img/header/menu@.png") 1x,
+      url("../img/header/menu@2x.png") 2x);
     background-size: cover;
     background-repeat: repeat-y;
     max-width: 768px;
