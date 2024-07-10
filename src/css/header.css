@@ -73,7 +73,7 @@
     display: none;
 }
 
-.open-menu-btn{
+.open-menu-btn {
     margin-right: 16px;
     stroke: #fafafa;
     width: 28px;
@@ -92,6 +92,27 @@
 
 .hidden {
     display: none;
+}
+
+.fadeOut {
+    opacity: 1;
+    animation: fadeOut 0.7s forwards;
+}
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1.0s forwards;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @media only screen and (min-width: 768px) {
@@ -121,7 +142,7 @@
         color: #fafafa;
     }
 
-    .header-menu{
+    .header-menu {
         font-weight: 500;
         font-size: 16px;
         letter-spacing: -0.02em;
@@ -129,16 +150,6 @@
         color: #fafafa;
         text-align: center;
         position: absolute;
-
-    }
-    .header-menu {
-        opacity: 0;
-        animation: ani 2.5s forwards;
-    }
-        
-        @keyframes ani {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
     }
 
     .header-btn {

@@ -23,13 +23,37 @@ const refs = {
     targetProjects: document.querySelector('#projects'),
     targetFaq: document.querySelector('#faq-section'),
     targetOrder: document.querySelector('#work-together'),
-    
-    
 }
 
 export const menuAnim = refs.menu.addEventListener('click', (e) => {
     toggleMenu(e, refs.menuItems, false);
 })
+
+export const menuOnResize = window.onresize = () => {
+    if (window.innerWidth >= 768) {
+        if (refs.mobileMenu.classList.contains('fadeIn')) {
+            refs.mobileMenu.classList.remove('fadeIn');
+            refs.mobileMenu.classList.add('hidden');
+
+            refs.menuItems.classList.remove('hidden');
+            refs.menuItems.classList.remove('fadeOut');
+            refs.menuItems.classList.add('fadeIn');
+        }
+    } else {
+        if (refs.menuItems.classList.contains('fadeIn')) {
+            refs.menuItems.classList.remove('fadeIn');
+            refs.menuItems.classList.add('hidden');
+
+            refs.mobileMenu.classList.remove('hidden');
+            refs.mobileMenu.classList.remove('fadeOut');
+            refs.mobileMenu.classList.add('fadeIn');
+        }
+    }
+
+    if (window.innerWidth < 768) {
+        refs.menuItems.classList.add('hidden');
+    }
+}
 
 // Smooth scrolls
 ///////////////////
@@ -99,20 +123,25 @@ export const closeMenuBtnClick = refs.closeMenuBtn.addEventListener('click', (e)
 // Help functions.
 ///////////////////
 
-function toggleMenu(e, menu, stopScroll = true) {
+function toggleMenu(e, menu) {
     e.preventDefault();
-    toggleClass(menu, 'hidden');
-    if (stopScroll) {
-        toggleClass(document.documentElement, 'noScroll');
-        toggleClass(document.body, 'noScroll');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.toggle('fadeIn');
+    } else {
+        menu.classList.toggle('fadeIn');
+        menu.classList.toggle('fadeOut');
     }
+    document.documentElement.classList.toggle('noScroll');
+    document.body.classList.toggle('noScroll');
 }
 
 function closeMenu(e, element) {
     e.preventDefault();
-    addClass(element, 'hidden');
-    removeClass(document.documentElement, 'noScroll');
-    removeClass(document.body, 'noScroll');
+    element.classList.remove('fadeIn');
+    element.classList.add('fadeOut');
+    document.documentElement.classList.remove('noScroll');
+    document.body.classList.remove('noScroll');
 }
 
 function smoothScrollTo(e, element) {
@@ -120,24 +149,4 @@ function smoothScrollTo(e, element) {
     element.scrollIntoView({
         behavior: 'smooth'
     });
-}
-
-function toggleClass(element, className) {
-    if (element.classList.contains(className) == true) {
-        element.classList.remove(className);
-    } else {
-        element.classList.add(className);
-    }
-}
-
-function addClass(element, className) {
-    if (element.classList.contains(className) == false) {
-        element.classList.add(className);
-    }
-}
-
-function removeClass(element, className) {
-    if (element.classList.contains(className) == true) {
-        element.classList.remove(className);
-    }
 }
