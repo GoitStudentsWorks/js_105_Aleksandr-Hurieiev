@@ -4,7 +4,7 @@
     display: none;
 }
 
-.container {
+.wraper {
     max-width: 375px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container {
+    .wraper {
         max-width: 768px;
     }
 
@@ -75,7 +75,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .container {
+    .wraper {
         min-width: 1440px;
     }
 
@@ -142,7 +142,7 @@
 }
 
 .error-message {
-    color: red;
+    color: #ed3b44;
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
