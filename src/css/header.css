@@ -12,10 +12,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .header-container {
-    margin-top: 32px;
+    padding-top: 32px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
