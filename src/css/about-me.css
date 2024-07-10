@@ -130,9 +130,11 @@
 }
 
 /* ============ swiper ====================================================== */
+.swiper-box{
+  position: relative;
+}
 .cnt-about-skills {
-  display: flex;
-  align-items: center;
+  padding-right: 75px;
 }
 .swiper_about-slide {
   justify-content: center;
@@ -153,23 +155,25 @@ li.swiper-slide {
   font-size: 16px;
   font-weight: 500px;
 }
-.cnt-about-skills .swiper_about-next {
-  position: static;
-  margin-left: 55px;
-  border: none;
-  cursor: pointer;
+
+ .swiper_about-next {
   background-color: transparent;
+  width: 28px;
+  height: 28px;
+
 }
 .swiper_about-next::after {
-  /* display: none; */
+  display: none;
 }
 .about-skills-btn-icon {
+  fill: rgba(250, 250, 250, 0.2);;
 }
+
 @media screen and (min-width: 768px) {
-  .cnt-about-skills .swiper_about-next {
-    margin-left: 64px;
+.swiper_about-next {
     width: 40px;
     height: 40px;
+
   }
   .about-skills-text {
     font-size: 20px;
@@ -177,14 +181,20 @@ li.swiper-slide {
   .about__user-item {
     height: 700px;
   }
+  .cnt-about-skills {
+    padding-right: 104px;
+}
 }
 
 @media screen and (min-width: 1440px) {
-  .cnt-about-skills .swiper_about-next {
-    margin-left: 72px;
+  .swiper-box{
+    padding: 0 32px;
+  }
+ .swiper_about-next {
+
   }
   .cnt-about-skills {
-    margin-left: 32px;
+    padding-right: 112px;
   }
   .cnt-about-skills .swiper_about-slide {
     width: 200px !important;
