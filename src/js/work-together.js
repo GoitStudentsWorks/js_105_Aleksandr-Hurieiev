@@ -39,10 +39,12 @@ async function post(email, comment) {
 
 modalBtn.addEventListener('click', () => {
     backdrop.classList.remove('is-open');
+    document.removeEventListener('keydown', escEvent);
 });
 
 backdrop.addEventListener('click', e => {
     if (e.target === e.currentTarget) {
         backdrop.classList.remove('is-open');
+        document.removeEventListener('keydown', escEvent);
     }
 });
