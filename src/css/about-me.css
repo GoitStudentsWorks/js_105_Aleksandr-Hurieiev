@@ -146,7 +146,7 @@
   aspect-ratio: 3/3;
   cursor: pointer;
 }
-li.swiper-slide {
+li.swiper_about-slide {
   display: flex;
 }
 .about-skills-text {

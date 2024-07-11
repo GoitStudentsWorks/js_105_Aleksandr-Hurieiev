@@ -114,6 +114,10 @@ a:hover {
     box-shadow: 0 0 15px #ed3b44;
     transform: scale(1.1);
 }
+.activ {
+    box-shadow: 0 0 15px #ed3b44;
+    transform: scale(1.1);
+}
 /* ================= cnt info ==================== */
 /* ================= cnt img ===================== */
 .cnt-projects-img {
