@@ -24,15 +24,8 @@ async function fetchReviews() {
 
 // Функція для показу повідомлення про помилку
 function showErrorMessage() {
-  iziToast.warning({
-    title: 'Hello',
-    message: 'Not found',
-    position: "topRight",
-    timeout: 2000,
-    progressBar: false,
-});
-  // const errorMessage = document.getElementById('error-message');
-  // errorMessage.style.display = 'block';
+  const errorMessage = document.getElementById('error-message');
+  errorMessage.style.display = 'block';
 }
 
 // Функція для приховування повідомлення про помилку

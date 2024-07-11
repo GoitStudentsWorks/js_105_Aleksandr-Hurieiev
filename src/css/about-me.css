@@ -1,10 +1,9 @@
-.about__user {
-  padding: 0;
-}
+
 .about__user-list {
   gap: 16px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 32px;
 }
 .about__user-item {
   border-radius: 24px;
@@ -42,7 +41,6 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 32px 0 0 0;
   margin-bottom: 32px;
 }
 .accordion-container_about .acc {
@@ -56,6 +54,7 @@
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 .accordion-container_about .acc .ac-header {
+  margin-bottom: 11px;
 }
 .accordion-container_about .acc .acc-trigger {
   font-family: var(--font-family);
@@ -110,14 +109,12 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 12px 0 20px;
 }
 .ac-text_role,
 .ac-text_education {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 12px 0 20px;
 }
 .accordion-container_about .acc.js-enabled .acc-panel {
   visibility: hidden;
@@ -172,6 +169,15 @@ li.swiper-slide {
 }
 
 @media screen and (min-width: 768px) {
+  .accordion-container_about {
+    margin-bottom: 64px;
+  }
+  .accordion-container_about .acc .ac-header {
+    margin-bottom: 8px;
+}
+.ac-text_about {
+  gap: 16px;
+}
   .swiper-box .swiper_about-next {
     width: 40px;
     height: 40px;
@@ -182,19 +188,26 @@ li.swiper-slide {
   .about__user-item {
     height: 700px;
   }
+  .about__user-text {
+    font-size: 38px;
+    line-height: 105%;
+  }
   .cnt-about-skills {
     padding-right: 104px;
+  }
+  .about__user-item:nth-child(1) {
+    padding: 64px 64px 0 64px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .swiper-box {
-    padding: 0 32px;
+    margin: 0 32px;
   }
   .swiper-box .swiper_about-next {
   }
   .cnt-about-skills {
-    padding-right: 112px;
+    padding-right: 111px;
   }
   .cnt-about-skills .swiper_about-slide {
     width: 200px !important;
@@ -213,20 +226,16 @@ li.swiper-slide {
     font-size: 38px;
     line-height: 105%;
   }
-  .about__user-item:nth-child(1) {
-    padding: 64px 64px 0 64px;
-  }
   .ac-text_about {
     padding: 8px 68px 32px 0;
   }
   .ac-text_about li:nth-child(1) {
-    padding-top: 8px;
   }
   .ac-text_about li:nth-child(2) {
-    padding-bottom: 32px;
   }
   .ac-text_about {
     flex: 0 1 50%;
+    gap: 32px;
   }
   .acc-box {
     display: flex;
@@ -235,7 +244,7 @@ li.swiper-slide {
   .accordion-container_about .acc.is-active .acc-panel {
     display: flex;
   }
-  .accordion-container_about .acc.js-enabled .acc-panel {
+  .accordion-container_about .acc.js-enabled .acc-panel{
     display: flex;
   }
   .accordion-container_about .acc .acc-panel {
