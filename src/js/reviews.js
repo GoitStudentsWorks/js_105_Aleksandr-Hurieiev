@@ -1,6 +1,9 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 let reviews = [];
 
 // Асинхронна функція для отримання відгуків з API
@@ -21,8 +24,15 @@ async function fetchReviews() {
 
 // Функція для показу повідомлення про помилку
 function showErrorMessage() {
-  const errorMessage = document.getElementById('error-message');
-  errorMessage.style.display = 'block';
+  iziToast.warning({
+    title: 'Hello',
+    message: 'Not found',
+    position: "topRight",
+    timeout: 2000,
+    progressBar: false,
+});
+  // const errorMessage = document.getElementById('error-message');
+  // errorMessage.style.display = 'block';
 }
 
 // Функція для приховування повідомлення про помилку
