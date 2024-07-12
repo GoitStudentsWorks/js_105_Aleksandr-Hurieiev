@@ -9,7 +9,7 @@
 }
 
 .faq-sec{
-margin-bottom: 64px;
+padding-bottom: 64px;
 }
 
 .accordionFaq-container .ac {
@@ -109,7 +109,7 @@ text-align: left;
 
 @media only screen and (min-width: 768px) {
 .faq-sec {
-        margin-bottom: 96px;
+        padding-bottom: 96px;
  }
 
 .accordionFaq-container .ac .ac-trigger {
@@ -122,6 +122,10 @@ text-align: left;
 
 
 @media only screen and (min-width: 1440px) {
+.faq-sec {
+        padding-bottom: 164px;
+}
+
 .accordionFaq-container{
 display: flex;
 flex-wrap: wrap;
