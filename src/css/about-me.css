@@ -226,28 +226,21 @@ li.swiper-slide {
     font-size: 38px;
     line-height: 105%;
   }
-  .ac-text_about {
-    padding: 8px 68px 32px 696px;
-  }
   .ac-text_about li:nth-child(1) {
   }
   .ac-text_about li:nth-child(2) {
   }
   .ac-text_about {
-    flex: 0 1 50%;
     gap: 32px;
   }
-  .acc-box {
-    display: flex;
-    flex: 0 1 50%;
-  }
+
   .accordion-container_about .acc.is-active .acc-panel {
   }
   .accordion-container_about .acc.js-enabled .acc-panel{
   }
   .accordion-container_about .acc .acc-panel {
   }
-  .ac-text_role, .ac-text_education{
-    padding-left: 696px;
+  .ac-text_role, .ac-text_education, .ac-text_about{
+    padding: 0 68px 0 696px;
   }
 }
