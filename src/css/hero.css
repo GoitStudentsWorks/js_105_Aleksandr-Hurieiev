@@ -6,11 +6,12 @@ padding-bottom: 32px;
 
 .hero {
     margin-bottom: 64px;
-background-size: cover;
-background-image: 
-url('../img/hero/rectangle-mob.jpg');
+background-image: image-set(
+      url("../img/hero/hero-mob@1x.png") 1x,
+      url("../img/hero/hero-mob@2x.png") 2x);
 background-repeat: no-repeat;
-background-position: center;
+background-position: left top;
+background-size: initial;
 }
 
 .hero-link {
@@ -72,17 +73,15 @@ color: #fafafa;
 background-color: transparent;
 }
 
-.heroSection {
-    position: relative;
-}
-
 
 
 
 @media screen and (min-width: 768px) {
 .hero {
     margin-bottom: 94px;
-background-image: url('../img/hero/rectangle-tabl.jpg');
+    background-image: image-set(
+        url("../img/hero/hero-tab@1x.png") 1x,
+        url("../img/hero/hero-tab@2x.png") 2x);
          }
 .hero-container {
 padding-top: 300px;
@@ -134,7 +133,9 @@ height: 55px;
 
 @media screen and (min-width: 1440px) {
 .hero {
-background-image: url('../img/hero/rectangle-desk.jpg');
+    background-image: image-set(
+        url("../img/hero/hero-desk@1x.png") 1x,
+        url("../img/hero/hero-desk@2x.png") 2x);
 }
     
 .social-list-link {
@@ -154,8 +155,6 @@ height: 55px;
 .hero-title {
 justify-content: center;
 align-items: center;
-margin-left: auto;
-margin-right: auto;
 font-family: "Inter Tight", sans-serif;
 font-weight: 500;
 font-size: 90px;
@@ -163,7 +162,7 @@ line-height: 1;
 letter-spacing: -0.03em;
 text-transform: uppercase;
 color: #fafafa;
-margin-left: auto;
-margin-right: auto;
+margin-left: 146px;
+margin-right: 146px;
         }
 }

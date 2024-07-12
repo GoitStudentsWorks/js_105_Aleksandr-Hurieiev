@@ -1,5 +1,4 @@
 .benefits-title {
-margin: 0;
 white-space: nowrap;
 font-weight: 600;
 font-size: 16px;
@@ -41,10 +40,12 @@ color: rgba(250, 250, 250, 0.6);
 margin-bottom: 32px;
 }
 .benefits-btn {
-display: inline-block;
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
 border: 1px solid rgba(250, 250, 250, 0.2);
 border-radius: 60px;
-padding: 18px 36px;
 width: 187px;
 height: 55px;
 font-family: "Inter Tight", sans-serif;
@@ -93,8 +94,6 @@ height: 675px;
 justify-content: space-between; 
 align-items: flex-start;
 box-sizing: border-box;
-padding-left: 0;
-padding-right: 0;
 }
 .benefits-list {
 justify-content: flex-end;
@@ -103,5 +102,7 @@ max-width: 680px;
 .benefits-card {
 width: 332px;
 }
-
+.benefits-title {
+margin-bottom: 0;
+}
 }
