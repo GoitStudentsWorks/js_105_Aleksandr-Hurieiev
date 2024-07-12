@@ -1,3 +1,6 @@
+.about_title{
+  display: none;
+}
 
 .about__user-list {
   gap: 16px;
