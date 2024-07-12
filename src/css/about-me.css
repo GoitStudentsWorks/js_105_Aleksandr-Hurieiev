@@ -227,7 +227,7 @@ li.swiper-slide {
     line-height: 105%;
   }
   .ac-text_about {
-    padding: 8px 68px 32px 0;
+    padding: 8px 68px 32px 696px;
   }
   .ac-text_about li:nth-child(1) {
   }
@@ -242,11 +242,12 @@ li.swiper-slide {
     flex: 0 1 50%;
   }
   .accordion-container_about .acc.is-active .acc-panel {
-    display: flex;
   }
   .accordion-container_about .acc.js-enabled .acc-panel{
-    display: flex;
   }
   .accordion-container_about .acc .acc-panel {
+  }
+  .ac-text_role, .ac-text_education{
+    padding-left: 696px;
   }
 }
