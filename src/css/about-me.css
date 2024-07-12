@@ -132,7 +132,7 @@
   position: relative;
 }
 .cnt-about-skills {
-  padding-right: 75px;
+  max-width: 260px;
 }
 .swiper_about-slide {
   justify-content: center;
@@ -193,7 +193,7 @@ li.swiper-slide {
     line-height: 105%;
   }
   .cnt-about-skills {
-    padding-right: 104px;
+    max-width: 600px;
   }
   .about__user-item:nth-child(1) {
     padding: 64px 64px 0 64px;
@@ -207,7 +207,7 @@ li.swiper-slide {
   .swiper-box .swiper_about-next {
   }
   .cnt-about-skills {
-    padding-right: 111px;
+    max-width: 1200px;
   }
   .cnt-about-skills .swiper_about-slide {
     width: 200px !important;
