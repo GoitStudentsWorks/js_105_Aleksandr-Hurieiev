@@ -1,168 +1,154 @@
-.hero-container{
-position: relative;
-padding-top: 281px;
-padding-bottom: 32px;
-}
-
 .hero {
-    margin-bottom: 64px;
-background-image: image-set(
-      url("../img/hero/hero-mob@1x.png") 1x,
-      url("../img/hero/hero-mob@2x.png") 2x);
-background-repeat: no-repeat;
-background-position: left top;
-background-size: initial;
-}
+    padding-top: 281px;
+    padding-bottom: 32px;
+    background-size: cover;
+    background-image:
+        url('../img/hero/rectangle-mob.jpg');
+    background-repeat: no-repeat;
 
-.hero-link {
-display: flex;
-align-items: center;
-flex-direction: row;
-gap: 4px;
- } 
+}
 
 .social-list {
-gap: 4px;
-   }
+    gap: 4px;
+    justify-content: end;
+    display: flex;
+}
 
 .hero-title {
-justify-content: start;
-margin-bottom: 212px;
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-font-size: 50px;
-line-height: 1;
-letter-spacing: -0.03em;
-text-transform: uppercase;
-color: #fafafa;
+    justify-content: start;
+    margin-bottom: 212px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
 
 }
 
 .social-list-link {
-display: blok;
-justify-content: center;
-align-items: center;
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 60px;
-padding: 10px 12px;
-width: 37px;
-height: 37px;
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-font-size: 14px;
-letter-spacing: -0.02em;
-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    width: 37px;
+    height: 37px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
 }
 
 .social-list {
-display: flex;
-list-style-type: none;
+    justify-content: end;
+    display: flex;
+    list-style-type: none;
 }
 
 .address-link {
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 60px;
-padding: 10px 12px;
-width: 178px;
-height: 37px;
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-font-size: 14px;
-letter-spacing: -0.02em;
-color: #fafafa;
-background-color: transparent;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 12px;
+    width: 178px;
+    height: 37px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    background-color: transparent;
 }
 
-
-
-
-@media screen and (min-width: 768px) {
-.hero {
-    margin-bottom: 94px;
-    background-image: image-set(
-        url("../img/hero/hero-tab@1x.png") 1x,
-        url("../img/hero/hero-tab@2x.png") 2x);
-         }
-.hero-container {
-padding-top: 300px;
-padding-bottom: 32px;
-                 }
-.hero-link {
-position: absolute;
-bottom: 32px;
-right: 32px;
-                  
+@media screen and (min-resolution: 192dpi) and (min-width: 768px) {
+    .hero {
+        padding-top: 300px;
+        padding-bottom: 32px;
+        background-image: url('../img/hero/rectangle-tab.jpg');
     }
- .social-list-link {
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 60px;
-padding: 18px 20px;
-width: 55px;
-height: 55px;
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-font-size: 16px;
-letter-spacing: -0.02em;
-color: #fafafa;
-}
-.hero-title {
-font-family: "Inter Tight",
-sans-serif;
-font-weight: 500;
-font-size: 90px;
-line-height: 1;
-letter-spacing: -0.03em;
-text-transform: uppercase;
-color: #fafafa;
-}
 
-.address-link {
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 60px;
-padding: 18px 24px;
-width: 223px;
-height: 55px;
-   }
-.hero-link {
-justify-content: center;
-width: 473px;
-height: 55px;
-}
-}
+    .social-list {
+        justify-content: end;
+        display: flex;
+    }
 
+    .social-list-link {
+        border: 1px solid rgba(250, 250, 250, 0.2);
+        border-radius: 60px;
+        width: 55px;
+        height: 55px;
+        font-family: "Inter Tight", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+    }
+
+    .hero-title {
+        font-family: "Inter Tight",
+            sans-serif;
+        font-weight: 500;
+        font-size: 90px;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #fafafa;
+    }
+
+    .address-link {
+        border: 1px solid rgba(250, 250, 250, 0.2);
+        border-radius: 60px;
+        padding: 18px 24px;
+        width: 223px;
+        height: 55px;
+    }
+
+    .hero-link {
+        justify-content: center;
+        width: 473px;
+        height: 55px;
+    }
+}
 
 @media screen and (min-width: 1440px) {
-.hero {
-    background-image: image-set(
-        url("../img/hero/hero-desk@1x.png") 1x,
-        url("../img/hero/hero-desk@2x.png") 2x);
-}
-    
-.social-list-link {
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-font-size: 16px;
-letter-spacing: -0.02em;
-color: #fafafa;
-    
-border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 60px;
-padding: 18px 20px;
-width: 55px;
-height: 55px;
+    .hero {
+        background-image: url('../img/hero/rectangle-desk.jpg');
     }
 
-.hero-title {
-justify-content: center;
-align-items: center;
-font-family: "Inter Tight", sans-serif;
-font-weight: 500;
-font-size: 90px;
-line-height: 1;
-letter-spacing: -0.03em;
-text-transform: uppercase;
-color: #fafafa;
-margin-left: 146px;
-margin-right: 146px;
-        }
+    .social-list {
+        justify-content: end;
+        display: flex;
+    }
+
+    .social-list-link {
+        justify-content: center;
+        align-items: center;
+        font-family: "Inter Tight", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+
+        border: 1px solid rgba(250, 250, 250, 0.2);
+        border-radius: 60px;
+        height: 55px;
+    }
+
+    .hero-title {
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Inter Tight", sans-serif;
+        font-weight: 500;
+        font-size: 90px;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #fafafa;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
